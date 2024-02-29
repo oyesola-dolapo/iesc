@@ -83,7 +83,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="shadow-lg relative bg-white h-max px-[1rem] py-[.8rem] lg:py-0  lg:px-[4rem] flex items-center justify-between">
+    <nav className="shadow-lg absolute top-0 left-0 bg-white w-screen z-[1] h-max px-[1rem] py-[.8rem] lg:py-0  lg:px-[4rem] flex items-center justify-between">
       <img
         src="./images/logo.webp"
         alt=""
@@ -121,7 +121,7 @@ export default function Nav() {
 
       {menu && (
         <ul
-          className={`mobileNav absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.9rem] text-webColor`}>
+          className={`mobileNav bg-white absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.9rem] text-webColor`}>
           {navLinks.map((link) => {
             return (
               <li
