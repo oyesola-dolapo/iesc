@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Nav() {
   const [menu, setMenu] = useState(false);
-  const [subMenus, setSubMenus] = useState({});
+  const [subMenu, setSubMenu] = useState({});
 
   const navLinks = [
     {
@@ -64,18 +64,21 @@ export default function Nav() {
 
   const handleMenu = () => {
     setMenu(!menu);
+    if (menu === false) {
+      setSubMenu(false);
+    }
   };
 
   const handleSubMenu = (title) => {
-    setSubMenus((prevSubMenus) => {
-      const newSubMenus = { ...prevSubMenus };
-      Object.keys(newSubMenus).forEach((key) => {
+    setSubMenu((prevSubMenu) => {
+      const newSubMenu = { ...prevSubMenu };
+      Object.keys(newSubMenu).forEach((key) => {
         if (key !== title) {
-          newSubMenus[key] = false;
+          newSubMenu[key] = false;
         }
       });
-      newSubMenus[title] = !newSubMenus[title];
-      return newSubMenus;
+      newSubMenu[title] = !newSubMenu[title];
+      return newSubMenu;
     });
   };
 
@@ -131,7 +134,7 @@ export default function Nav() {
                   {link.title}
                   {link.icon}
                 </a>
-                {link.sublinks && subMenus[link.title] && (
+                {link.sublinks && subMenu[link.title] && (
                   <ul className="w-full bg-webColor text-white top-[3.8rem]flex flex-col">
                     {link.sublinks.map((sublink) => (
                       <li key={sublink.title}>
