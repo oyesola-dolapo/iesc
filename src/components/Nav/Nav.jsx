@@ -98,7 +98,7 @@ export default function Nav() {
                 {link.icon}
                 <span className="absolute h-2 bg-[#ddb057] bottom-0 left-0 w-0 transition-width duration-200 group-hover:w-full"></span>
               </a>
-              {link.sublinks && subMenus[link.title] && (
+              {link.sublinks && (
                 <ul className="sub-link absolute top-[3.8rem] w-max bg-white flex flex-col shadow-lg">
                   {link.sublinks.map((sublink) => (
                     <li key={sublink.title}>
