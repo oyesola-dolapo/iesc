@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navLinkHover{
+  position: relative;
+}
+
+.navLinkHover:after {
+  content: "";
+  height: 2.5px;
+  width: 0%;
+  background-color: #ddb057;
+  position: absolute;
+  bottom: .6rem;
+  left: 0;
+  transition: width 200ms linear;
+}
+
+.navLinkHover:hover:after {
+  width: 100%;
+}
+
+.sub-link{
+  display: none;
+  transition: all 300ms linear;
+}
+
+.navLink:hover .sub-link{
+  display: flex;
+}

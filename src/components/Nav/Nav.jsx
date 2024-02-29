@@ -1,0 +1,159 @@
+import React, { useState } from "react";
+
+export default function Nav() {
+  const [menu, setMenu] = useState(false);
+  const [subMenus, setSubMenus] = useState({});
+
+  const navLinks = [
+    {
+      title: "HOME",
+      link: "",
+    },
+    {
+      title: "WHO ARE WE",
+      icon: <i className="fa-solid fa-sort-down"></i>,
+      sublinks: [
+        {
+          title: "Church History",
+          link: "",
+        },
+        {
+          title: "Mission",
+          link: "",
+        },
+        {
+          title: "Vision",
+          link: "",
+        },
+        {
+          title: "Our Belief",
+          link: "",
+        },
+      ],
+    },
+    {
+      title: "WHAT WE DO",
+      icon: <i className="fa-solid fa-sort-down"></i>,
+      sublinks: [
+        {
+          title: "Adult Education",
+          link: "",
+        },
+        {
+          title: "Achievers Healthcare",
+          link: "",
+        },
+        {
+          title: "Prayer Requests",
+          link: "",
+        },
+        {
+          title: "Special Programs",
+          link: "",
+        },
+      ],
+    },
+    {
+      title: "ONLINE GIVING",
+    },
+    {
+      title: "MEDIA RESOURCES",
+      link: "",
+    },
+  ];
+
+  const handleMenu = () => {
+    setMenu(!menu);
+  };
+
+  const handleSubMenu = (title) => {
+    setSubMenus((prevSubMenus) => {
+      const newSubMenus = { ...prevSubMenus };
+      Object.keys(newSubMenus).forEach((key) => {
+        if (key !== title) {
+          newSubMenus[key] = false;
+        }
+      });
+      newSubMenus[title] = !newSubMenus[title];
+      return newSubMenus;
+    });
+  };
+
+  return (
+    <nav className="shadow-lg relative bg-white h-max px-[1rem] py-[.8rem] lg:py-0  lg:px-[4rem] flex items-center justify-between">
+      <img
+        src="./images/logo.webp"
+        alt=""
+        className="w-[2rem] lg:w-[3rem] lg:h-[3rem]"
+      />
+      <ul
+        className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.9rem] text-webColor`}>
+        {navLinks.map((link) => {
+          return (
+            <li className="navLink relative" key={link.title}>
+              <a
+                href="#"
+                className="navLinkHover flex gap-2 py-[1.2rem] relative hover:text-[#ddb057]">
+                <p>{link.title}</p>
+                {link.icon}
+                <span className="absolute h-2 bg-[#ddb057] bottom-0 left-0 w-0 transition-width duration-200 group-hover:w-full"></span>
+              </a>
+              {link.sublinks && subMenus[link.title] && (
+                <ul className="sub-link absolute top-[3.8rem] w-max bg-white flex flex-col shadow-lg">
+                  {link.sublinks.map((sublink) => (
+                    <li key={sublink.title}>
+                      <a href="#" className=" rounded-lg">
+                        <p className="hover:bg-webColor hover:text-black duration-[300ms] px-4 py-3 uppercase">
+                          {sublink.title}
+                        </p>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+
+      {menu && (
+        <ul
+          className={`mobileNav absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.9rem] text-webColor`}>
+          {navLinks.map((link) => {
+            return (
+              <li
+                className="navLink relative w-full text-center px-4"
+                key={link.title}>
+                <a
+                  href="#"
+                  onClick={() => handleSubMenu(link.title)}
+                  className="flex justify-center gap-2 py-[1.2rem] relative">
+                  {link.title}
+                  {link.icon}
+                </a>
+                {link.sublinks && subMenus[link.title] && (
+                  <ul className="w-full bg-webColor text-white top-[3.8rem]flex flex-col">
+                    {link.sublinks.map((sublink) => (
+                      <li key={sublink.title}>
+                        <a href="#">
+                          <p className="py-3 uppercase">{sublink.title}</p>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <div className="text-xl lg:hidden cursor-pointer" onClick={handleMenu}>
+        {!menu ? (
+          <i class="fa-solid fa-bars"></i>
+        ) : (
+          <i class="fa-solid fa-xmark"></i>
+        )}
+      </div>
+    </nav>
+  );
+}
