@@ -23,7 +23,7 @@ export default function Landing() {
           </p>
           <p>- 1 Corinthians 14:26</p>
         </div>
-        <button className="border-2 border-solid border-webColor px-8 py-3 mt-8 bg-[rgba(255, 255, 255, 0.5)] backdrop-filter backdrop-blur-md">
+        <button className="border-2 border-solid border-webColor px-8 py-3 mt-8 backdrop-filter backdrop-blur-sm ">
           worship with us
         </button>
       </div>
