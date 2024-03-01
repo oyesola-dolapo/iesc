@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.navLinkHover{
+.navLinkHover {
   position: relative;
 }
 
@@ -12,7 +12,7 @@
   width: 0%;
   background-color: #ddb057;
   position: absolute;
-  bottom: .6rem;
+  bottom: 0.6rem;
   left: 0;
   transition: width 200ms linear;
 }
@@ -21,11 +21,28 @@
   width: 100%;
 }
 
-.sub-link{
+.sub-link {
   display: none;
   transition: all 300ms linear;
 }
 
-.navLink:hover .sub-link{
+.navLink:hover .sub-link {
   display: flex;
+}
+
+.worship-btn::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ddb057;
+  z-index: -1;
+  transition: all 300ms;
+}
+
+.worship-btn:hover::after {
+  width: 100%;
+
 }
