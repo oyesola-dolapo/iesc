@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Landing() {
   return (
-    <div className="w-full h-[90vh] lg:h-screen relative flex px-[.6rem] bg-black">
+    <div className="w-full h-[90vh] sm:h-screen relative flex px-[.6rem] bg-black">
       <img
         src="/images/bg-img.webp"
         alt=""
