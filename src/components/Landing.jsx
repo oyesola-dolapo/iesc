@@ -25,7 +25,7 @@ export default function Landing() {
           variants={myVariants}
           initial="hidden"
           animate="visible"
-          transition={{ duration: 1 }}
+          transition={{ duration: .7 }}
           className="text-white uppercase text-[1.8rem] sm:text-[3rem] lg:text-[4rem] font-bold">
           welcome to inri evangelical spiritual{" "}
           <span className="text-webColor">church</span>
@@ -34,7 +34,7 @@ export default function Landing() {
           variants={myVariants}
           initial="hidden"
           animate="visible"
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: .7, delay: 0.25 }}
           className="font-medium mt-4 sm:text-[1.5rem] lg:px-[10rem]">
           <p>
             {" "}
@@ -49,7 +49,7 @@ export default function Landing() {
           variants={myVariants}
           initial="hidden"
           animate="visible"
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: .7, delay: .5 }}
           className="worship-btn isolate relative uppercase border-2 border-solid border-webColor px-8 py-3 mt-8 backdrop-filter backdrop-blur-sm ">
           worship with us
         </motion.button>
