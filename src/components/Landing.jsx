@@ -26,7 +26,7 @@ export default function Landing() {
           initial="hidden"
           animate="visible"
           transition={{ duration: .7 }}
-          className="text-white uppercase text-[1.8rem] sm:text-[3rem] lg:text-[4rem] font-bold">
+          className="text-white uppercase text-[1.8rem] sm:text-[2.2rem] lg:text-[4rem] font-bold">
           welcome to inri evangelical spiritual{" "}
           <span className="text-webColor">church</span>
         </motion.h1>
@@ -35,7 +35,7 @@ export default function Landing() {
           initial="hidden"
           animate="visible"
           transition={{ duration: .7, delay: 0.25 }}
-          className="font-medium mt-4 sm:text-[1.5rem] lg:px-[10rem]">
+          className="font-medium mt-4 sm:text-[1rem] lg:text-[1.5rem] lg:px-[10rem]">
           <p>
             {" "}
             "What then shall we say, brothers and sisters? When you come
