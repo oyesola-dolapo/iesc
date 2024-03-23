@@ -20,7 +20,7 @@ export default function Nav() {
         },
         {
           title: "Mission",
-          // link: "",
+          link: "/Mission",
         },
         {
           title: "Vision",

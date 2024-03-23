@@ -5,7 +5,7 @@ export default function Footer() {
   const footerLinks = [
     {
       title: "Home",
-      link: "",
+      link: "/",
     },
     {
       title: "Contact Us",
@@ -89,10 +89,10 @@ export default function Footer() {
           <div className="sunday">
             <h1 className="font-bold">Sunday</h1>
             <ul>
-              <li>First Service: 4:30am - 7:30</li>
-              <li>Second Service: 7:30am - 9:30</li>
-              <li>Third Service: 9:30am - 11:30</li>
-              <li>Last Service: 11:30am - 3:30</li>
+              <li>First Service: 4:30am - 7:30am</li>
+              <li>Second Service: 7:30am - 9:30am</li>
+              <li>Third Service: 9:30am - 11:30am</li>
+              <li>Last Service: 11:30am - 3:30pm</li>
             </ul>
           </div>
           <div className="tuesday">
