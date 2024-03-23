@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Location from "./components/Location";
 import Vision from "./components/Vision/Vision";
 import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <div className="w-full">
           <Location />
         </div>
+
+        <Footer />
       </main>
     </Router>
   );
