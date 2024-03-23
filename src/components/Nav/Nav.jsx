@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [menu, setMenu] = useState(false);
@@ -7,7 +8,7 @@ export default function Nav() {
   const navLinks = [
     {
       title: "HOME",
-      link: "",
+      link: "/",
     },
     {
       title: "WHO ARE WE",
@@ -15,19 +16,19 @@ export default function Nav() {
       sublinks: [
         {
           title: "Church History",
-          link: "",
+          // link: "",
         },
         {
           title: "Mission",
-          link: "",
+          // link: "",
         },
         {
           title: "Vision",
-          link: "",
+          link: "/Vision",
         },
         {
           title: "Our Belief",
-          link: "",
+          // link: "",
         },
       ],
     },
@@ -37,19 +38,19 @@ export default function Nav() {
       sublinks: [
         {
           title: "Adult Education",
-          link: "",
+          // link: "",
         },
         {
           title: "Achievers Healthcare",
-          link: "",
+          // link: "",
         },
         {
           title: "Prayer Requests",
-          link: "",
+          // link: "",
         },
         {
           title: "Special Programs",
-          link: "",
+          // link: "",
         },
       ],
     },
@@ -58,7 +59,7 @@ export default function Nav() {
     },
     {
       title: "MEDIA RESOURCES",
-      link: "",
+      // link: "",
     },
   ];
 
@@ -78,6 +79,12 @@ export default function Nav() {
         }
       });
       newSubMenu[title] = !newSubMenu[title];
+      const isSubMenuParent = navLinks.find(
+        (link) => link.title === title && link.sublinks
+      );
+      if (!isSubMenuParent) {
+        setMenu(false);
+      }
       return newSubMenu;
     });
   };
@@ -94,22 +101,22 @@ export default function Nav() {
         {navLinks.map((link) => {
           return (
             <li className="navLink relative" key={link.title}>
-              <a
-                href="#"
+              <Link
+                to={link.link}
                 className="navLinkHover flex gap-2 py-[1.2rem] relative hover:text-[#ddb057]">
                 <p>{link.title}</p>
                 {link.icon}
                 <span className="absolute h-2 bg-[#ddb057] bottom-0 left-0 w-0 transition-width duration-200 group-hover:w-full"></span>
-              </a>
+              </Link>
               {link.sublinks && (
                 <ul className="sub-link absolute top-[3.8rem] w-[15rem] bg-white flex flex-col shadow-lg">
                   {link.sublinks.map((sublink) => (
                     <li key={sublink.title}>
-                      <a href="#" className=" rounded-lg">
+                      <Link to={sublink.link} className=" rounded-lg">
                         <p className="hover:bg-webColor hover:text-black duration-[300ms] px-4 py-3 uppercase">
                           {sublink.title}
                         </p>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -127,20 +134,24 @@ export default function Nav() {
               <li
                 className="navLink relative w-full text-center px-4"
                 key={link.title}>
-                <a
-                  href="#"
+                <Link
+                  to={link.link}
                   onClick={() => handleSubMenu(link.title)}
                   className="flex justify-center gap-2 py-[1.2rem] relative">
                   {link.title}
                   {link.icon}
-                </a>
+                </Link>
                 {link.sublinks && subMenu[link.title] && (
                   <ul className="w-full bg-webColor text-white top-[3.8rem]flex flex-col">
                     {link.sublinks.map((sublink) => (
-                      <li key={sublink.title}>
-                        <a href="#">
+                      <li
+                        key={sublink.title}
+                        onClick={() => {
+                          setMenu(false);
+                        }}>
+                        <Link to={sublink.link}>
                           <p className="py-3 uppercase">{sublink.title}</p>
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
