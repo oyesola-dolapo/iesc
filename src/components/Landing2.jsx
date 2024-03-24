@@ -38,12 +38,12 @@ export default function Landing() {
           className="font-medium mt-4 sm:text-[1rem] lg:text-[1.5rem] lg:px-[10rem]">
           <p>
             {" "}
-            "What then shall we say, brothers and sisters? When you come
-            together, each of you has a hymn, or a word of instruction, a
-            revelation, a tongue or an interpretation. Everything must be done
-            so that the church may be built up."
+            "Bring the whole tithe into the storehouse, that there may be food
+            in my house. Test me in this,” says the Lord Almighty, “and see if I
+            will not throw open the floodgates of heaven and pour out so much
+            blessing that there will not be room enough to store it."
           </p>
-          <p>- 1 Corinthians 14:26</p>
+          <p>- Malachi 3:10</p>
         </motion.div>
         <motion.button
           variants={myVariants}

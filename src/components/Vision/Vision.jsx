@@ -7,7 +7,7 @@ export default function Vision() {
       <h1 className="tracking-wider font-bold text-[1.5rem] mb-[.5rem] xl:text-[2rem]">
         THE VISION AND MISSION
       </h1>
-      <p className=" text-[1.2rem]">
+      <p className=" lg:text-[1.2rem]">
         <span className={style}>INRI EVANGELICAL SPIRITUAL CHURCH</span> <br />
         The primary preoccupation of true adherents of the Christian religion is
         to win souls for Christ. Your efforts in words and deeds will either

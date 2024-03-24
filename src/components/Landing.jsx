@@ -38,12 +38,13 @@ export default function Landing() {
           className="font-medium mt-4 sm:text-[1rem] lg:text-[1.5rem] lg:px-[10rem]">
           <p>
             {" "}
-            "What then shall we say, brothers and sisters? When you come
-            together, each of you has a hymn, or a word of instruction, a
-            revelation, a tongue or an interpretation. Everything must be done
-            so that the church may be built up."
+            "God is spirit, and those who worship him must worship in spirit and
+            truth." 24 For God is Spirit, so those who worship him must worship
+            in spirit and in truth.” 24 God is sheer being itself - Spirit.
+            Those who worship him must do it out of their very being, their
+            spirits, their true selves, in adoration."
           </p>
-          <p>- 1 Corinthians 14:26</p>
+          <p>- 1 John 4:24</p>
         </motion.div>
         <motion.button
           variants={myVariants}

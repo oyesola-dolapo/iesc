@@ -6,7 +6,7 @@ export default function History() {
       <h1 className="tracking-wider font-bold text-[1.5rem] mb-[.5rem] xl:text-[2rem]">
         CHURCH HISTORY
       </h1>
-      <p className="text-[1.2rem]">
+      <p className="lg:text-[1.2rem]">
         The Church of God known as{" "}
         <span className="text-webColor font-medium">
           INRI EVANGELICAL SPIRITUAL CHURCH
