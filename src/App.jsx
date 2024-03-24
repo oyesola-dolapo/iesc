@@ -4,10 +4,10 @@ import "./App.css";
 import Home from "./components/Home";
 import Location from "./components/Location";
 import Vision from "./components/Vision/Vision";
-import Mission from "./components/Mission/Mission";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import History from "./components/History/History";
 
 function App() {
   return (
@@ -18,11 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Vision" element={<Vision />} />
-          <Route path="/Mission" element={<Mission />} />
+          <Route path="/ChurchHistory" element={<History />} />
         </Routes>
-        <div className="w-full">
-          <Location />
-        </div>
+       
 
         <Footer />
       </main>

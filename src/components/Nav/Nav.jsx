@@ -16,14 +16,10 @@ export default function Nav() {
       sublinks: [
         {
           title: "Church History",
-          // link: "",
+          link: "/ChurchHistory",
         },
         {
-          title: "Mission",
-          link: "/Mission",
-        },
-        {
-          title: "Vision",
+          title: "Vision & Mission",
           link: "/Vision",
         },
         {

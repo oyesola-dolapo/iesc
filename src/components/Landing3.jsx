@@ -16,7 +16,7 @@ export default function Landing() {
   return (
     <div className="w-full min-h-[90vh] py-[4rem] h-max sm:h-max relative flex px-[.6rem] xl:h-screen sm:px-[2.5rem] bg-black">
       <img
-        src="/images/bg-img.webp"
+        src="/images/bg-img3.webp"
         alt=""
         className="absolute top-0 left-0 w-full h-full object-cover opacity-[.6] z-[0]"
       />
@@ -51,7 +51,7 @@ export default function Landing() {
           animate="visible"
           transition={{ duration: 0.7, delay: 0.5 }}
           className="worship-btn isolate relative uppercase border-2 border-solid border-webColor px-8 py-3 mt-8 backdrop-filter backdrop-blur-sm ">
-          media resources
+          worship with us
         </motion.button>
       </div>
     </div>
