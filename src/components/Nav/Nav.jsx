@@ -86,7 +86,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="shadow-lg absolute top-0 left-0 bg-white w-screen z-[1] h-max px-[1rem] py-[.8rem] lg:py-0  lg:px-[4rem] flex items-center justify-between">
+    <nav className="shadow-lg absolute top-0 left-0  w-screen z-[1] h-max px-[1rem] py-[.8rem] lg:py-0  lg:px-[4rem] flex items-center justify-between">
       <img
         src="./images/logo.webp"
         alt=""
@@ -159,9 +159,9 @@ export default function Nav() {
       )}
       <div className="text-xl lg:hidden cursor-pointer" onClick={handleMenu}>
         {!menu ? (
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars text-webColor"></i>
         ) : (
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark text-webColor"></i>
         )}
       </div>
     </nav>
