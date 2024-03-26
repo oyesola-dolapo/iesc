@@ -16,7 +16,7 @@ export default function Landing() {
   return (
     <div className="z-[0] w-full min-h-[90vh] py-[4rem] h-max sm:h-max relative flex px-[.6rem] xl:h-screen sm:px-[2.5rem] bg-black">
       <img
-        src="/images/bg-img3.webp"
+        src="/images/personal/357739412_299619835784355_4237193990120909052_n.webp"
         alt=""
         className="absolute top-0 left-0 w-full h-full object-cover opacity-[.6] z-[0]"
       />
