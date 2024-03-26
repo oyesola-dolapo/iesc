@@ -88,7 +88,7 @@ export default function Sunday() {
             <ul>
               {service.times.map((time) => {
                 return (
-                  <li className="text-[1.2rem] tracking-wider">{time.time}</li>
+                  <li className="lg:text-[1.2rem] tracking-wider">{time.time}</li>
                 );
               })}
             </ul>
