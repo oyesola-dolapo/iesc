@@ -13,7 +13,7 @@ export default function MEETPRIMATE() {
           meet the primate
         </h1>
       </div>
-      <div className="w-[60%] px-[1rem] xl:px-[2rem]">
+      <div className="xl:w-[60%] px-[1rem] xl:px-[2rem]">
         <p className="text-[1.2rem]">
           Primate (Dr) Babatunde Elijah Ayodele, founder - Pastor, INRI
           Evangelical Spiritual Church, llasamaja, Lagos recognised early in
