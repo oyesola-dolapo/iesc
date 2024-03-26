@@ -5,7 +5,7 @@ export default function Footer() {
   const footerLinks = [
     {
       title: "Home",
-      link: "/",
+      link: "/*",
     },
     {
       title: "Contact Us",

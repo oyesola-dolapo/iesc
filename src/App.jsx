@@ -18,7 +18,7 @@ function App() {
         <ScrollToTop />
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route path="/Vision" element={<Vision />} />
           <Route path="/ChurchHistory" element={<History />} />
           <Route path="/sunday" element={<Sunday />} />
