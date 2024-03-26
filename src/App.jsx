@@ -8,6 +8,7 @@ import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import History from "./components/History/History";
+import Sunday from "./components/Programs/Sunday/Sunday";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Vision" element={<Vision />} />
           <Route path="/ChurchHistory" element={<History />} />
+          <Route path="/sunday" element={<Sunday />} />
         </Routes>
        
 

@@ -11,6 +11,18 @@ export default function Nav() {
       link: "/",
     },
     {
+      title: "office of the primate",
+      icon: <i className="fa-solid fa-sort-down"></i>,
+      sublinks: [
+        { title: "Meet the primate" },
+        { title: "awards and recognition" },
+        { title: "warnings to the nation" },
+        { title: "Prophecies and fulfilments" },
+        { title: "inri widows foundation" },
+        { title: "appointments" },
+      ],
+    },
+    {
       title: "WHO ARE WE",
       icon: <i className="fa-solid fa-sort-down"></i>,
       sublinks: [
@@ -26,36 +38,76 @@ export default function Nav() {
           title: "Our Belief",
           // link: "",
         },
+        {
+          title: "who is primate",
+          // link: "",
+        },
       ],
     },
+
     {
-      title: "WHAT WE DO",
+      title: "programs",
       icon: <i className="fa-solid fa-sort-down"></i>,
       sublinks: [
         {
-          title: "Adult Education",
-          // link: "",
+          title: "Sunday Service",
+          link: "/sunday",
         },
-        {
-          title: "Achievers Healthcare",
-          // link: "",
-        },
-        {
-          title: "Prayer Requests",
-          // link: "",
-        },
-        {
-          title: "Special Programs",
-          // link: "",
-        },
+        { title: "God will not put me  to shame" },
+        { title: "freedom and deliverance" },
+        { title: "food service" },
+        { title: "galilee" },
       ],
     },
     {
-      title: "ONLINE GIVING",
+      title: "GIVE",
     },
     {
-      title: "MEDIA RESOURCES",
+      title: "MEDIA CONNECT",
       // link: "",
+    },
+    {
+      title: "RESOURCES",
+      icon: <i className="fa-solid fa-sort-down"></i>,
+      index: 0,
+      sublinks: [
+        {
+          title: "Adult education",
+          link: "",
+        },
+        {
+          title: "Sign Language",
+          link: "/Vision",
+        },
+        {
+          title: "music academy",
+          // link: "",
+        },
+        {
+          title: "content creation and management",
+          // link: "",
+        },
+        {
+          title: "community projects",
+          // link: "",
+        },
+        {
+          title: "empowerment programmes",
+          // link: "",
+        },
+        {
+          title: "youth development",
+          // link: "",
+        },
+        {
+          title: "vocational trainings",
+          // link: "",
+        },
+        {
+          title: "careers",
+          // link: "",
+        },
+      ],
     },
   ];
 
@@ -100,16 +152,19 @@ export default function Nav() {
               <Link
                 to={link.link}
                 className="navLinkHover flex gap-2 py-[1.2rem] relative hover:text-[#ddb057]">
-                <p>{link.title}</p>
+                <p className="uppercase">{link.title}</p>
                 {link.icon}
                 <span className="absolute h-2 bg-[#ddb057] bottom-0 left-0 w-0 transition-width duration-200 group-hover:w-full"></span>
               </Link>
               {link.sublinks && (
-                <ul className="sub-link absolute top-[3.8rem] w-[15rem] bg-white flex flex-col shadow-lg">
+                <ul
+                  className={`sub-link absolute top-[3.8rem] w-[15rem] bg-white flex flex-col shadow-lg  ${
+                    link.index === 0 ? "left-[-100%]" : ""
+                  }`}>
                   {link.sublinks.map((sublink) => (
                     <li key={sublink.title}>
-                      <Link to={sublink.link} className=" rounded-lg">
-                        <p className="hover:bg-webColor hover:text-black duration-[300ms] px-4 py-3 uppercase">
+                      <Link to={sublink.link} className={` rounded-lg `}>
+                        <p className="hover:bg-webColor text-textGold hover:text-black duration-[300ms] px-4 py-3 uppercase">
                           {sublink.title}
                         </p>
                       </Link>
@@ -124,7 +179,7 @@ export default function Nav() {
 
       {menu && (
         <ul
-          className={`mobileNav bg-white absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.9rem] text-webColor`}>
+          className={`mobileNav bg-white absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.9rem] text-textGold`}>
           {navLinks.map((link) => {
             return (
               <li
@@ -138,7 +193,7 @@ export default function Nav() {
                   {link.icon}
                 </Link>
                 {link.sublinks && subMenu[link.title] && (
-                  <ul className="w-full bg-webColor text-white top-[3.8rem]flex flex-col">
+                  <ul className="w-full bg-textGold text-white top-[3.8rem]flex flex-col">
                     {link.sublinks.map((sublink) => (
                       <li
                         key={sublink.title}

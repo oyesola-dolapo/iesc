@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Landing from "./Landing";
-import Landing2 from "./Landing2";
-import Landing3 from "./Landing3";
+import Landing from "./Landing/Landing";
+import Landing2 from "./Landing/Landing2";
+import Landing3 from "./Landing/Landing3";
 import Location from "./Location";
 
 export default function Home() {

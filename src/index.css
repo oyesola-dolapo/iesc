@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -26,15 +26,13 @@ body{
 }
 
 .sub-link {
-  height: 0;
+  height: 0%;
   overflow: hidden;
-  opacity: 0;
   transition: all 150ms linear;
 }
 
 .navLink:hover .sub-link {
-  opacity: 1;
-  height: 11.5rem;
+  height: auto;
 }
 
 .worship-btn::after {
@@ -51,5 +49,4 @@ body{
 
 .worship-btn:hover::after {
   width: 100%;
-
 }

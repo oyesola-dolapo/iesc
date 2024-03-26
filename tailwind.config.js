@@ -11,7 +11,8 @@ export default {
     },
     extend: {
       colors: {
-        webColor: "#DDB057",
+        webColor: "#F3CF09",
+        textGold: "#DDB057",
         grayBg: "#212529",
       },
     },
