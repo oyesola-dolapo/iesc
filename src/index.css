@@ -35,18 +35,23 @@ body {
   height: auto;
 }
 
-.worship-btn::after {
-  content: "";
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #ddb057;
-  z-index: -1;
-  transition: all 300ms;
-}
+@media screen and (min-width: 1200px) {
+  .worship-btn {
+    border: 2px solid #ddb057;
+  }
+  .worship-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ddb057;
+    z-index: -1;
+    transition: all 300ms;
+  }
 
-.worship-btn:hover::after {
-  width: 100%;
+  .worship-btn:hover::after {
+    width: 100%;
+  }
 }

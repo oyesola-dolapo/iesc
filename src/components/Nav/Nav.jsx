@@ -138,7 +138,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="shadow-lg absolute top-0 left-0  w-screen z-[99] h-max px-[1rem] py-[.8rem] z-1 lg:py-0  lg:px-[4rem] flex items-center justify-between">
+    <nav className="backdrop-filter backdrop-blur-sm shadow-lg absolute top-0 left-0  w-screen z-[99] h-max px-[1rem] py-[.8rem] z-1 lg:py-0  lg:px-[4rem] flex items-center justify-between">
       <img
         src="./images/logo.webp"
         alt=""
