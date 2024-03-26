@@ -14,7 +14,7 @@ export default function Landing() {
   };
 
   return (
-    <div className="w-full min-h-[90vh] py-[4rem] h-max sm:h-max relative flex px-[.6rem] xl:h-screen sm:px-[2.5rem] bg-black">
+    <div className="z-[-1] w-full min-h-[90vh] py-[4rem] h-max sm:h-max relative flex px-[.6rem] xl:h-screen sm:px-[2.5rem] bg-black">
       <img
         src="/images/bg-img2.webp"
         alt=""
