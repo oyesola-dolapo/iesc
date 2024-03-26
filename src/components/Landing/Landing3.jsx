@@ -50,7 +50,7 @@ export default function Landing() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="worship-btn isolate relative uppercase border-2 border-solid border-webColor px-8 py-3 mt-8 backdrop-filter backdrop-blur-sm ">
+          className="z-0 worship-btn isolate relative uppercase border-2 border-solid border-webColor px-8 py-3 mt-8 backdrop-filter backdrop-blur-sm ">
           worship with us
         </motion.button>
       </div>
