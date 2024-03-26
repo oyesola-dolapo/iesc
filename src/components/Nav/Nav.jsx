@@ -188,7 +188,7 @@ export default function Nav() {
                 <Link
                   to={link.link}
                   onClick={() => handleSubMenu(link.title)}
-                  className="flex justify-center gap-2 py-[1.2rem] relative">
+                  className="flex justify-center gap-2 py-[1.2rem] relative uppercase">
                   {link.title}
                   {link.icon}
                 </Link>
