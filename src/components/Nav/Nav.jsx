@@ -14,7 +14,10 @@ export default function Nav() {
       title: "office of the primate",
       icon: <i className="fa-solid fa-sort-down"></i>,
       sublinks: [
-        { title: "Meet the primate" },
+        {
+          title: "Meet the primate",
+          link: "/MeetPrimate",
+        },
         { title: "awards and recognition" },
         { title: "warnings to the nation" },
         { title: "Prophecies and fulfilments" },
@@ -36,10 +39,6 @@ export default function Nav() {
         },
         {
           title: "Our Belief",
-          // link: "",
-        },
-        {
-          title: "who is primate",
           // link: "",
         },
       ],

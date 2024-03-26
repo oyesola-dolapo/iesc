@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import History from "./components/History/History";
 import Sunday from "./components/Programs/Sunday/Sunday";
+import MeetPrimate from "./components/PrimateOffice/MeetPrimate.jsx";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
           <Route path="/Vision" element={<Vision />} />
           <Route path="/ChurchHistory" element={<History />} />
           <Route path="/sunday" element={<Sunday />} />
+          <Route path="/MeetPrimate" element={<MeetPrimate />} />
         </Routes>
-       
 
         <Footer />
       </main>
