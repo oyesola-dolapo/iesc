@@ -5,7 +5,7 @@ function Login() {
   const { handleEmail, handlePassword, handleSignIn, loginErr, loggedIn } =
     useContext(AuthContext);
   
-  console.log(loggedIn)
+
 
   return (
     <div className="pt-[4rem] w-[100vw] flex flex-col-reverse lg:flex-row">

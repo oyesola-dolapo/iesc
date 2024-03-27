@@ -63,7 +63,7 @@ export default function Nav() {
     },
     {
       title: "MEDIA CONNECT",
-      // link: "",
+      link: "/Media",
     },
     {
       title: "RESOURCES",

@@ -55,3 +55,8 @@ body {
     width: 100%;
   }
 }
+
+.youtube-container {
+  width: 500px;
+  height: 200px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   const myVariants = {
@@ -51,8 +52,12 @@ export default function Landing() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="worship-btn bg-textGold xl:bg-transparent isolate relative uppercase px-8 py-3 mt-8 backdrop-filter backdrop-blur-sm ">
-          media resources
+          className="mt-8">
+          <Link
+            to="/Media"
+            className="worship-btn bg-textGold xl:bg-transparent isolate relative uppercase px-8 py-3  backdrop-filter backdrop-blur-sm ">
+            media resources
+          </Link>
         </motion.button>
       </div>
     </div>

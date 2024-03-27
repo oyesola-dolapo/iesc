@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Vision from "./components/Vision/Vision";
@@ -10,8 +15,7 @@ import History from "./components/History/History";
 import Sunday from "./components/Programs/Sunday/Sunday";
 import MeetPrimate from "./components/PrimateOffice/MeetPrimate.jsx";
 import Auth from "./components/Admin/AdminAuth/Auth.jsx";
-import AdminHome from "./components/Admin/AdminHome/AdminHome.jsx";
-import Login from "./components/Admin/Login/Login.jsx";
+import Media from "./components/MediaResources/Media.jsx";
 
 function App() {
   return (
@@ -25,6 +29,7 @@ function App() {
           <Route path="/ChurchHistory" element={<History />} />
           <Route path="/sunday" element={<Sunday />} />
           <Route path="/MeetPrimate" element={<MeetPrimate />} />
+          <Route path="/Media" element={<Media />} />
           <Route path="/iescAdmin" element={<Auth />} />
         </Routes>
 
