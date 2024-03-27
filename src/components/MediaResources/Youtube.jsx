@@ -29,7 +29,7 @@ export default function Youtube() {
       <h2 className="text-center mb-[.5rem] text-[1.2rem] font-bold">
         YOUTUBE VIDEOS
       </h2>
-      <div className="px-[]">
+      <div className="lg:flex lg:gap-[1rem] lg:flex-wrap">
         {links.map((link) => {
           return (
             // <div
@@ -38,7 +38,7 @@ export default function Youtube() {
             //   dangerouslySetInnerHTML={{ __html: link.link }}
             // />
 
-            <div className="lg:w-[40%]">
+            <div className="lg:w-[40%] mb-[1rem] lg:mb-0">
               <iframe
                 src={link.link}
                 title="YouTube video player"
