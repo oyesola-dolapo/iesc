@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
-import Location from "./components/Location";
 import Vision from "./components/Vision/Vision";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
@@ -10,6 +9,9 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import History from "./components/History/History";
 import Sunday from "./components/Programs/Sunday/Sunday";
 import MeetPrimate from "./components/PrimateOffice/MeetPrimate.jsx";
+import Auth from "./components/Admin/AdminAuth/Auth.jsx";
+import AdminHome from "./components/Admin/AdminHome/AdminHome.jsx";
+import Login from "./components/Admin/Login/Login.jsx";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="/ChurchHistory" element={<History />} />
           <Route path="/sunday" element={<Sunday />} />
           <Route path="/MeetPrimate" element={<MeetPrimate />} />
+          <Route path="/iescAdmin" element={<Auth />} />
         </Routes>
 
         <Footer />

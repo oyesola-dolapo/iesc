@@ -4,7 +4,7 @@ export default function Vision() {
   const style = "text-webColor font-medium";
   return (
     <div>
-      <div className="relative bg-black sm:hidden w-[100vw]" >
+      <div className="relative bg-black lg:hidden w-[100vw]" >
         <img
           src="/images/personal/IMG_1705.webp"
           alt=""

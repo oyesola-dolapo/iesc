@@ -24,6 +24,11 @@ export default function Home() {
       {activePage === 1 && <Landing />}
       {activePage === 2 && <Landing2 />}
       {activePage === 3 && <Landing3 />}
+
+      <div>
+
+      </div>
+
       <div className="w-full">
         <Location />
       </div>
