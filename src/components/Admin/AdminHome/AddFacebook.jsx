@@ -8,19 +8,19 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 
-export default function AddYoutube() {
-  const [ytVid, setYtVid] = useState([]);
-  const [ytLink, setYtLink] = useState("");
-  const [ytTitle, setYtTitle] = useState("");
+export default function AddFacebook() {
+  const [fbVid, setFbVid] = useState([]);
+  const [fbLink, setFbLink] = useState("");
+  const [fbTitle, setFbTitle] = useState("");
 
-  const handleYtLink = (e) => {
-    setYtLink(e.target.value);
+  const handleFbLink = (e) => {
+    setFbLink(e.target.value);
   };
-  const handleYtTitle = (e) => {
-    setYtTitle(e.target.value);
+  const handleFbTitle = (e) => {
+    setFbTitle(e.target.value);
   };
 
-  const linkCollectionRef = collection(db, "youtube");
+  const linkCollectionRef = collection(db, "facebook");
 
   const getLink = async () => {
     try {
@@ -29,7 +29,7 @@ export default function AddYoutube() {
         ...doc.data(),
         id: doc.id,
       }));
-      setYtVid(filteredData);
+      setFbVid(filteredData);
     } catch (err) {
       console.log(err);
     }
@@ -42,14 +42,14 @@ export default function AddYoutube() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(linkCollectionRef, { link: ytLink, title: ytTitle });
+      await addDoc(linkCollectionRef, { link: fbLink, title: fbTitle });
       getLink();
     } catch (err) {
       console.log(err);
     }
   };
   const handleDelete = async (id) => {
-    const linkDoc = doc(db, "youtube", id);
+    const linkDoc = doc(db, "facebook", id);
     try {
       await deleteDoc(linkDoc);
       getLink();
@@ -57,35 +57,34 @@ export default function AddYoutube() {
       console.log(err);
     }
   };
-
   return (
     <div className="Youtube w-full lg:w-[25rem]">
       <h1 className=" font-bold tracking-wide mb-[.5rem]">ADD YOUTUBE</h1>
       <form action="" onSubmit={handleSubmit}>
         <div className="flex flex-col">
           {" "}
-          <label htmlFor="ytvid" className="mb-[.5rem] text-[.8rem]">
-            YOUTUBE LINK
+          <label htmlFor="fbVid" className="mb-[.5rem] text-[.8rem]">
+            FACEBOOK LINK
           </label>{" "}
           <input
             type="text"
-            name="ytvid"
-            id="ytvid"
-            onChange={handleYtLink}
+            name="fbVid"
+            id="fbVid"
+            onChange={handleFbLink}
             placeholder="Add video link..."
             className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"
           />
         </div>
         <div className="flex flex-col">
           {" "}
-          <label htmlFor="tyvid" className="mb-[.5rem] text-[.8rem] mt-[.5rem]">
+          <label htmlFor="fbVid" className="mb-[.5rem] text-[.8rem] mt-[.5rem]">
             VIDEO TITLE
           </label>{" "}
           <input
             type="text"
-            name="ytvid"
-            id="ytvid"
-            onChange={handleYtTitle}
+            name="fbVid"
+            id="fbVid"
+            onChange={handleFbTitle}
             placeholder="Add video title..."
             className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"
           />
@@ -98,17 +97,17 @@ export default function AddYoutube() {
       </form>
 
       <div className="pt-[1rem]">
-        {ytVid.map((link) => {
+        {fbVid.map((link) => {
           return (
             <div className="w-full mb-[1rem]">
               <iframe
                 src={link.link}
-                title="YouTube video player"
+                scrolling="no"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                className="w-full h-[15rem] lg:h-[17rem]"></iframe>{" "}
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen="true"
+                className="w-full h-[15rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p
                 className="mt-[.2rem] underline text-red-500 cursor-pointer"

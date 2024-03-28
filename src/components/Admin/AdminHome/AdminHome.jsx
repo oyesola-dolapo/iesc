@@ -3,12 +3,10 @@ import { AuthContext } from "../AdminAuth/Auth";
 import { db } from "../../../config/firebase";
 import { collection, getDocs, doc } from "firebase/firestore";
 import AddYoutube from "./AddYoutube";
+import AddFacebook from "./AddFacebook";
 
 export default function AdminHome() {
   const { handleSignOut, loggedIn } = useContext(AuthContext);
-
-
-  
 
   return (
     <div className="pt-[4.5rem] px-[1rem] lg:px-[2rem]">
@@ -25,29 +23,7 @@ export default function AdminHome() {
 
       <div className="flex flex-wrap gap-[1rem] lg:gap-[2rem] mt-[1rem]">
         <AddYoutube />
-        <div className="Facebook w-full lg:w-[25rem]">
-          <h1 className=" font-bold tracking-wide mb-[.5rem]">ADD FACEBOOK</h1>
-          <form action="">
-            <div className="flex flex-col">
-              {" "}
-              <label htmlFor="tyvid" className="mb-[.5rem] text-[.8rem]">
-                FACEBOOK LINK
-              </label>{" "}
-              <input
-                type="text"
-                name="ytvid"
-                id="ytvid"
-                placeholder="Add video link..."
-                className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-black text-textGold rounded-lg w-[6rem] h-[2.5rem] mt-[.5rem] font-medium tracking-wide">
-              ADD
-            </button>
-          </form>
-        </div>
+        <AddFacebook />
       </div>
     </div>
   );
