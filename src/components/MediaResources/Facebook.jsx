@@ -25,7 +25,7 @@ export default function Facebook() {
   }, []);
 
   return (
-    <section id="facebook" className="pt-[4.5rem] px-[1rem] lg:px-[2rem]">
+    <section id="facebook" className="mt-[1.5rem] px-[1rem] lg:px-[2rem]">
       <h2 className="text-center mb-[.5rem] text-[1.2rem] font-bold">
         FACEBOOK VIDEOS
       </h2>
