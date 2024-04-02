@@ -30,7 +30,7 @@ export default function Whatsapp() {
   };
 
   return (
-    <div className="fixed bottom-[1rem] right-[1rem] flex flex-col items-end">
+    <div className="fixed bottom-[1rem] right-[1rem] flex flex-col items-end z-[99]">
       {openChats && (
         <motion.div
           variants={myVariants}

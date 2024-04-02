@@ -25,7 +25,7 @@ export default function Youtube() {
   }, []);
 
   return (
-    <div className=" px-[1rem] lg:px-[2rem]">
+    <section id="Youtube" className=" px-[1rem] lg:px-[2rem]">
       <h2
         className={`${
           links.length === 0 && "hidden"
@@ -55,6 +55,6 @@ export default function Youtube() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

@@ -25,7 +25,7 @@ export default function Facebook() {
   }, []);
 
   return (
-    <section id="facebook" className="mt-[1.5rem] px-[1rem] lg:px-[2rem]">
+    <section id="Facebook" className="mt-[1.5rem] px-[1rem] lg:px-[2rem]">
       <h2
         className={`${
           links.length === 0 && "hidden"
