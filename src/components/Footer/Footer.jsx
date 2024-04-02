@@ -113,7 +113,9 @@ export default function Footer() {
             {socials.map((link) => {
               return (
                 <li>
-                  <Link to={link.link}>{link.icon}</Link>
+                  <Link target="_blank" to={link.link}>
+                    {link.icon}
+                  </Link>
                 </li>
               );
             })}

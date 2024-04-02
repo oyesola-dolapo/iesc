@@ -6,11 +6,11 @@ export default function Whatsapp() {
   const myVariants = {
     hidden: {
       opacity: 0,
-      y: 120,
+        y: 120,
     },
     visible: {
       opacity: 1,
-      y: 0,
+        y: 0,
     },
   };
 
@@ -53,6 +53,7 @@ export default function Whatsapp() {
             {chats.map((chat) => (
               <motion.a
                 href="#"
+                target="_blank"
                 variants={myVariants}
                 initial="hidden"
                 animate="visible"
@@ -73,23 +74,20 @@ export default function Whatsapp() {
       <div
         onClick={open}
         className="w-[3rem] h-[3rem] rounded-full bg-[#2db742] flex justify-center items-center relative cursor-pointer mt-[1rem]">
-        {!openChats && (
-          <motion.p
-            href="#"
-            variants={myVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.2}}
-            className="absolute left-[-200%] bg-white w-max px-[.4rem] py-[.4rem] text-[.8rem] font-bold rounded">
-            Chat with us
-          </motion.p>
-        )}
+        <motion.p
+          variants={myVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.3 }}
+          className="absolute left-[-200%] bg-white w-max px-[.4rem] py-[.4rem] text-[.8rem] font-bold rounded">
+          Chat with us
+        </motion.p>
         <div>
           {" "}
-          {openChats ? (
-            <i className="fa-solid fa-xmark text-white text-[1.5rem] font-sm"></i>
+          {openChats === true ? (
+            <i class="fa-solid fa-xmark text-white text-[1.5rem]"></i>
           ) : (
-            <i className="fa-brands fa-whatsapp text-[1.5rem] text-white"></i>
+            <i class="fa-brands fa-whatsapp text-[1.5rem] text-white"></i>
           )}
         </div>
       </div>
