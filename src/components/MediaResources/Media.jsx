@@ -3,7 +3,7 @@ import Youtube from "./Youtube";
 import Facebook from "./Facebook";
 
 export default function Media() {
-  const [active, setActive] = useState(1);
+  const [activeSection, setActiveSection] = useState(1);
 
   const sections = [
     {
@@ -16,9 +16,14 @@ export default function Media() {
       key: 2,
       title: "Facebook",
       link: "#Facebook",
+      color: "#1877F2",
     },
   ];
-  
+
+  const handleClick = (sectionKey) => {
+    setActiveSection(sectionKey);
+  };
+
   return (
     <div className="min-h-[90vh] pt-[5rem]">
       <ul className="flex mx-auto justify-center mb-[1rem]">
@@ -27,15 +32,19 @@ export default function Media() {
             <li key={section.key}>
               <a
                 href={section.link}
-                className="px-[2rem] py-[.6rem] border-2 border-solid font-bold uppercase tracking-wider">
+                className={`px-[2rem] py-[.6rem] border-2 border-solid font-bold uppercase tracking-wider ${
+                  activeSection === section.key ? "bg-white border-black " : ""
+                }`}
+                style={{ backgroundColor: activeSection === section.key ? section.color : "" }}
+                onClick={() => handleClick(section.key)}>
                 {section.title}
               </a>
             </li>
           );
         })}
       </ul>
-      <Youtube />
-      <Facebook />
+      <Youtube active={activeSection === 1} />
+      <Facebook active={activeSection === 2} />
     </div>
   );
 }
