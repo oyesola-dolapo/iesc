@@ -51,7 +51,7 @@ export default function Youtube() {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                allowFullScreen="true"
                 className="w-full h-[15rem] lg:h-[15rem]"></iframe>{" "}
               <p className="text-[.9rem] lg:text-[1rem]">{link.title}</p>
             </div>
