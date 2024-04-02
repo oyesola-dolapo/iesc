@@ -29,10 +29,13 @@ export default function Youtube() {
       <h2
         className={`${
           links.length === 0 && "hidden"
-        } text-center mb-[.5rem] text-[1.2rem] font-bold`}>
+        } text-center mb-[.5rem] text-[1rem] lg:text-[1.2rem] font-bold`}>
         YOUTUBE VIDEOS
       </h2>
-      <div className="lg:flex lg:gap-[2rem] lg:justify-between lg:flex-wrap lg:w-[80%] lg:mx-auto">
+      <div
+        className={`${
+          links.length > 2 ? "lg:justify-between" : ""
+        } lg:flex lg:gap-[1.5rem] lg:flex-wrap lg:w-[90%] lg:mx-auto`}>
         {links.map((link) => {
           return (
             // <div
@@ -41,7 +44,7 @@ export default function Youtube() {
             //   dangerouslySetInnerHTML={{ __html: link.link }}
             // />
 
-            <div className="lg:w-[48%] mb-[1rem] lg:mb-0">
+            <div className="lg:w-[30%] mb-[1rem] lg:mb-0">
               <iframe
                 src={link.link}
                 title="YouTube video player"
@@ -49,8 +52,8 @@ export default function Youtube() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-                className="w-full h-[15rem] lg:h-[22rem]"></iframe>{" "}
-              <p className="text-[.9rem] lg:text-[1.2rem]">{link.title}</p>
+                className="w-full h-[15rem] lg:h-[15rem]"></iframe>{" "}
+              <p className="text-[.9rem] lg:text-[1rem]">{link.title}</p>
             </div>
           );
         })}

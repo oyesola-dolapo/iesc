@@ -44,6 +44,8 @@ export default function AddYoutube() {
     try {
       await addDoc(linkCollectionRef, { link: ytLink, title: ytTitle });
       getLink();
+      setYtLink("");
+      setYtTitle("");
     } catch (err) {
       console.log(err);
     }
@@ -63,28 +65,28 @@ export default function AddYoutube() {
       <h1 className=" font-bold tracking-wide mb-[.5rem]">ADD YOUTUBE</h1>
       <form action="" onSubmit={handleSubmit}>
         <div className="flex flex-col">
-          {" "}
           <label htmlFor="ytvid" className="mb-[.5rem] text-[.8rem]">
             YOUTUBE LINK
-          </label>{" "}
+          </label>
           <input
             type="text"
             name="ytvid"
             id="ytvid"
+            value={ytLink}
             onChange={handleYtLink}
             placeholder="Add video link..."
             className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"
           />
         </div>
         <div className="flex flex-col">
-          {" "}
           <label htmlFor="tyvid" className="mb-[.5rem] text-[.8rem] mt-[.5rem]">
             VIDEO TITLE
-          </label>{" "}
+          </label>
           <input
             type="text"
             name="ytvid"
             id="ytvid"
+            value={ytTitle}
             onChange={handleYtTitle}
             placeholder="Add video title..."
             className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"
@@ -100,7 +102,7 @@ export default function AddYoutube() {
       <div className="pt-[1rem]">
         {ytVid.map((link) => {
           return (
-            <div className="w-full mb-[1rem]">
+            <div className="w-full mb-[1rem]" key={link.id}>
               <iframe
                 src={link.link}
                 title="YouTube video player"
@@ -108,7 +110,7 @@ export default function AddYoutube() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-                className="w-full h-[15rem] lg:h-[17rem]"></iframe>{" "}
+                className="w-full h-[15rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p
                 className="mt-[.2rem] underline text-red-500 cursor-pointer"

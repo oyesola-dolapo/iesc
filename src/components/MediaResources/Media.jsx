@@ -26,16 +26,19 @@ export default function Media() {
 
   return (
     <div className="min-h-[90vh] pt-[5rem]">
-      <ul className="flex mx-auto justify-center mb-[1rem]">
+      <ul className="flex mx-auto justify-center mb-[1.5rem]">
         {sections.map((section) => {
           return (
             <li key={section.key}>
               <a
                 href={section.link}
-                className={`px-[2rem] py-[.6rem] border-2 border-solid font-bold uppercase tracking-wider ${
+                className={`text-[.8rem] lg:text-[1rem] px-[2rem] py-[.6rem] border-2 border-solid font-bold uppercase tracking-wider ${
                   activeSection === section.key ? "bg-white border-black " : ""
                 }`}
-                style={{ backgroundColor: activeSection === section.key ? section.color : "" }}
+                style={{
+                  backgroundColor:
+                    activeSection === section.key ? section.color : "",
+                }}
                 onClick={() => handleClick(section.key)}>
                 {section.title}
               </a>
