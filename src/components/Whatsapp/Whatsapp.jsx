@@ -6,11 +6,11 @@ export default function Whatsapp() {
   const myVariants = {
     hidden: {
       opacity: 0,
-        y: 120,
+      y: 120,
     },
     visible: {
       opacity: 1,
-        y: 0,
+      y: 0,
     },
   };
 
@@ -19,6 +19,7 @@ export default function Whatsapp() {
       key: 1,
       title: "IESC support center",
       subtitle: "IESC support",
+      link: "https://wa.me/+2349067219868",
     },
   ];
 
@@ -52,7 +53,7 @@ export default function Whatsapp() {
           <div className="py-[2rem] flex bg-white text-black">
             {chats.map((chat) => (
               <motion.a
-                href="#"
+                href={chat.link}
                 target="_blank"
                 variants={myVariants}
                 initial="hidden"
