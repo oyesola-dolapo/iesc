@@ -17,7 +17,7 @@ export default function Footer() {
     },
     {
       title: "Media Resources",
-      link: "",
+      link: "/Media",
     },
   ];
 

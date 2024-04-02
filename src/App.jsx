@@ -16,11 +16,12 @@ import Sunday from "./components/Programs/Sunday/Sunday";
 import MeetPrimate from "./components/PrimateOffice/MeetPrimate.jsx";
 import Auth from "./components/Admin/AdminAuth/Auth.jsx";
 import Media from "./components/MediaResources/Media.jsx";
+import Whatsapp from "./components/Whatsapp/Whatsapp.jsx";
 
 function App() {
   return (
     <Router>
-      <main>
+      <main className="relative">
         <ScrollToTop />
         <Nav />
         <Routes>
@@ -32,7 +33,7 @@ function App() {
           <Route path="/Media" element={<Media />} />
           <Route path="/iescAdmin" element={<Auth />} />
         </Routes>
-
+        <Whatsapp />
         <Footer />
       </main>
     </Router>

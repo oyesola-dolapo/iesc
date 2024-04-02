@@ -26,13 +26,15 @@ export default function Facebook() {
 
   return (
     <section id="facebook" className="mt-[1.5rem] px-[1rem] lg:px-[2rem]">
-      <h2 className="text-center mb-[.5rem] text-[1.2rem] font-bold">
+      <h2
+        className={`${
+          links.length === 0 && "hidden"
+        } text-center mb-[.5rem] text-[1.2rem] font-bold`}>
         FACEBOOK VIDEOS
       </h2>
       <div className="lg:flex lg:gap-[2rem] lg:justify-between lg:flex-wrap lg:w-[80%] lg:mx-auto">
         {links.map((link) => {
           return (
-
             <div className="lg:w-[48%] mb-[1rem] lg:mb-0">
               <iframe
                 src={link.link}

@@ -25,8 +25,11 @@ export default function Youtube() {
   }, []);
 
   return (
-    <div className="pt-[4.5rem] px-[1rem] lg:px-[2rem]">
-      <h2 className="text-center mb-[.5rem] text-[1.2rem] font-bold">
+    <div className=" px-[1rem] lg:px-[2rem]">
+      <h2
+        className={`${
+          links.length === 0 && "hidden"
+        } text-center mb-[.5rem] text-[1.2rem] font-bold`}>
         YOUTUBE VIDEOS
       </h2>
       <div className="lg:flex lg:gap-[2rem] lg:justify-between lg:flex-wrap lg:w-[80%] lg:mx-auto">

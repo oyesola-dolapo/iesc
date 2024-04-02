@@ -4,8 +4,6 @@ import { AuthContext } from "../../Admin/AdminAuth/Auth";
 function Login() {
   const { handleEmail, handlePassword, handleSignIn, loginErr, loggedIn } =
     useContext(AuthContext);
-  
-
 
   return (
     <div className="pt-[4rem] w-[100vw] flex flex-col-reverse lg:flex-row">
@@ -13,7 +11,7 @@ function Login() {
         <h1 className="mt-[1rem] lg:my-[0] hidden lg:flex uppercase font-medium text-[1.5rem]">
           Welcome back, <span className="text-webColor">Admin</span>
         </h1>
-        <h1 className="text-[1.5rem] lg:text-[2rem] uppercase font-bold">
+        <h1 className="text-[1.5rem] lg:text-[2rem] uppercase font-bold mt-[1rem] lg:mt-0">
           Login to your account
         </h1>
         <form
@@ -76,6 +74,5 @@ function Login() {
     </div>
   );
 }
-
 
 export default Login;
