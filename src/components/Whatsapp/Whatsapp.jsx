@@ -75,14 +75,16 @@ export default function Whatsapp() {
       <div
         onClick={open}
         className="w-[3rem] h-[3rem] rounded-full bg-[#2db742] flex justify-center items-center relative cursor-pointer mt-[1rem]">
-        <motion.p
-          variants={myVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.3 }}
-          className="absolute left-[-200%] bg-white w-max px-[.4rem] py-[.4rem] text-[.8rem] font-bold rounded">
-          Chat with us
-        </motion.p>
+        {!openChats && (
+          <motion.p
+            variants={myVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.3 }}
+            className="absolute left-[-200%] bg-white w-max px-[.4rem] py-[.4rem] text-[.8rem] font-bold rounded">
+            Chat with us
+          </motion.p>
+        )}
         <div>
           {" "}
           {openChats === true ? (
