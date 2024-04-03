@@ -35,7 +35,7 @@ export default function Youtube() {
       <div
         className={`${
           links.length > 2 ? "lg:justify-between" : ""
-        } lg:flex lg:gap-[1.5rem] lg:flex-wrap lg:w-[90%] lg:mx-auto`}>
+        } sm:flex sm:justify-between lg:gap-[1.5rem] sm:flex-wrap lg:w-[90%] lg:mx-auto`}>
         {links.map((link) => {
           return (
             // <div
@@ -44,7 +44,7 @@ export default function Youtube() {
             //   dangerouslySetInnerHTML={{ __html: link.link }}
             // />
 
-            <div className="lg:w-[30%] mb-[1rem] lg:mb-0">
+            <div className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0">
               <iframe
                 src={link.link}
                 title="YouTube video player"

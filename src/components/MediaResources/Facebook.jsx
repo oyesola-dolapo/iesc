@@ -25,7 +25,9 @@ export default function Facebook() {
   }, []);
 
   return (
-    <section id="Facebook" className="mt-[1rem] lg:mt-[1.5rem] px-[1rem] lg:px-[2rem]">
+    <section
+      id="Facebook"
+      className="mt-[1rem] lg:mt-[1.5rem] px-[1rem] lg:px-[2rem]">
       <h2
         className={`${
           links.length === 0 && "hidden"
@@ -35,10 +37,10 @@ export default function Facebook() {
       <div
         className={`${
           links.length > 2 ? "lg:justify-between" : ""
-        } lg:flex lg:gap-[1.5rem] lg:flex-wrap lg:w-[90%] lg:mx-auto`}>
+        } sm:flex sm:justify-between lg:gap-[1.5rem] lg:flex-wrap lg:w-[90%] lg:mx-auto`}>
         {links.map((link) => {
           return (
-            <div className="lg:w-[30%] mb-[1rem] lg:mb-0">
+            <div className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0">
               <iframe
                 src={link.link}
                 scrolling="no"

@@ -99,10 +99,12 @@ export default function AddYoutube() {
         </button>
       </form>
 
-      <div className="pt-[1rem]">
+      <div className="pt-[1rem] sm:flex sm:justify-between flex-wrap lg:block ">
         {ytVid.map((link) => {
           return (
-            <div className="w-full mb-[1rem]" key={link.id}>
+            <div
+              className="w-full sm:w-[49%] lg:w-full mb-[1rem]"
+              key={link.id}>
               <iframe
                 src={link.link}
                 title="YouTube video player"
@@ -110,7 +112,7 @@ export default function AddYoutube() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-                className="w-full h-[15rem] lg:h-[14rem]"></iframe>{" "}
+                className="w-full h-[15rem] sm:h-[20rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p
                 className="mt-[.2rem] underline text-red-500 cursor-pointer"

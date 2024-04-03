@@ -96,10 +96,10 @@ export default function AddFacebook() {
         </button>
       </form>
 
-      <div className="pt-[1rem]">
+      <div className="pt-[1rem] sm:flex sm:justify-between flex-wrap lg:block ">
         {fbVid.map((link) => {
           return (
-            <div className="w-full mb-[1rem]">
+            <div className="w-full sm:w-[49%] lg:w-full mb-[1rem]">
               <iframe
                 src={link.link}
                 scrolling="no"
@@ -107,7 +107,7 @@ export default function AddFacebook() {
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true"
-                className="w-full h-[15rem] lg:h-[14rem]"></iframe>{" "}
+                className="w-full h-[15rem]  sm:h-[20rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p
                 className="mt-[.2rem] underline text-red-500 cursor-pointer"

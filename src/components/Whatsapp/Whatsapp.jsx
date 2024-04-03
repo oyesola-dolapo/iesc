@@ -81,7 +81,7 @@ export default function Whatsapp() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.3 }}
-            className="absolute left-[-200%] bg-white w-max px-[.4rem] py-[.4rem] text-[.8rem] text-[#5a5a5a] font-bold rounded">
+            className="absolute left-[-200%] bg-white w-max px-[.5rem] py-[.4rem] text-[.8rem] text-[#5a5a5a] font-bold rounded">
             Chat with us
           </motion.p>
         )}
