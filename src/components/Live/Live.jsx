@@ -103,7 +103,7 @@ export default function Live() {
               <a
                 href={item.link}
                 target="_blank"
-                className={`relative flex rounded overflow-hidden w-[22rem] lg:w-[24rem] h-[4rem]`}
+                className={`relative flex rounded overflow-hidden w-[22rem] lg:w-[24rem] h-[3.5rem] lg:h-[4rem]`}
                 style={{ backgroundColor: item.color }}>
                 <div
                   className="flex absolute top-0 left-0 text-white text-[1.5rem] w-[20%] h-[100%] justify-center items-center"
