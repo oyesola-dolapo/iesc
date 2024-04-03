@@ -178,7 +178,7 @@ export default function Nav() {
 
       {menu && (
         <ul
-          className={`mobileNav bg-white absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.9rem] text-textGold`}>
+          className={`mobileNav bg-white absolute top-[100%] left-0 w-full shadow-lg nav-link flex flex-col items-center font-medium text-[.75rem] text-textGold`}>
           {navLinks.map((link) => {
             return (
               <li
@@ -187,12 +187,12 @@ export default function Nav() {
                 <Link
                   to={link.link}
                   onClick={() => handleSubMenu(link.title)}
-                  className="flex justify-center gap-2 py-[1.2rem] relative uppercase">
+                  className="flex justify-center gap-2 py-[1rem] relative uppercase">
                   {link.title}
                   {link.icon}
                 </Link>
                 {link.sublinks && subMenu[link.title] && (
-                  <ul className="w-full bg-textGold text-white top-[3.8rem]flex flex-col">
+                  <ul className="w-full bg-textGold text-white top-[3.8rem] flex flex-col">
                     {link.sublinks.map((sublink) => (
                       <li
                         key={sublink.title}
