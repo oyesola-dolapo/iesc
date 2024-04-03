@@ -42,7 +42,7 @@ export default function Socials() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="bg-gray-900 py-5 lg:py-6">
+    <div className="bg-gray-900 py-5 lg:py-6 mt-[1.5rem]">
       <ul className="flex justify-center items-center gap-[1rem] lg:gap-[4rem]">
         {socials.map((social, index) => (
           <li key={index}>
