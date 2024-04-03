@@ -88,9 +88,9 @@ export default function Whatsapp() {
         <div>
           {" "}
           {openChats === true ? (
-            <i class="fa-solid fa-xmark text-white text-[1.5rem]"></i>
+            <i className="fa-solid fa-xmark text-white text-[1.5rem]"></i>
           ) : (
-            <i class="fa-brands fa-whatsapp text-[1.5rem] text-white"></i>
+            <i className="fa-brands fa-whatsapp text-[1.5rem] text-white"></i>
           )}
         </div>
       </div>

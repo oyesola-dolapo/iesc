@@ -4,6 +4,7 @@ import { db } from "../../../config/firebase";
 import { collection, getDocs, doc } from "firebase/firestore";
 import AddYoutube from "./AddYoutube";
 import AddFacebook from "./AddFacebook";
+import AdminLive from "./AdminLive/AdminLive";
 
 export default function AdminHome() {
   const { handleSignOut, loggedIn } = useContext(AuthContext);
@@ -24,6 +25,7 @@ export default function AdminHome() {
       <div className="flex flex-wrap gap-[1rem] lg:gap-[2rem] mt-[1rem]">
         <AddYoutube />
         <AddFacebook />
+        <AdminLive />
       </div>
     </div>
   );

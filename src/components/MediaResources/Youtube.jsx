@@ -44,11 +44,13 @@ export default function Youtube() {
             //   dangerouslySetInnerHTML={{ __html: link.link }}
             // />
 
-            <div className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0">
+            <div
+              className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0"
+              key={link.id}>
               <iframe
                 src={link.link}
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowFullScreen="true"

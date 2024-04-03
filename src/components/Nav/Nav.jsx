@@ -160,7 +160,7 @@ export default function Nav() {
         className="w-[2rem] lg:w-[3rem] lg:h-[3rem]"
       />
       <ul
-        className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.8rem] text-webColor`}>
+        className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.9rem] text-webColor`}>
         {navLinks.map((link) => {
           return (
             <li className="navLink relative" key={link.title}>
@@ -233,9 +233,9 @@ export default function Nav() {
       )}
       <div className="text-xl lg:hidden cursor-pointer" onClick={handleMenu}>
         {!menu ? (
-          <i class="fa-solid fa-bars text-webColor"></i>
+          <i className="fa-solid fa-bars text-webColor"></i>
         ) : (
-          <i class="fa-solid fa-xmark text-webColor"></i>
+          <i className="fa-solid fa-xmark text-webColor"></i>
         )}
       </div>
     </nav>

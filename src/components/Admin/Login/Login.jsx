@@ -65,7 +65,7 @@ function Login() {
         <img
           src="/images/personal/IMG_5149.webp"
           alt=""
-          className="opacity-[.6]"
+          className="opacity-[.6] sm:h-[30vh] lg:h-full sm:w-full object-cover"
         />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-wider text-white lg:hidden uppercase w-max font-medium text-[1.5rem]">
           Welcome back, <span className="text-webColor">Admin</span>

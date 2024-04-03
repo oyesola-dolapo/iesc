@@ -12,7 +12,7 @@ export default function Socials() {
     {
       title: "TikTok",
       subtitle: "Follow us on TikTok",
-      icon: <i class="fa-brands fa-tiktok"></i>,
+      icon: <i className="fa-brands fa-tiktok"></i>,
       link: `https://www.tiktok.com/@primateayodele`,
       color: `#000000`,
     },
@@ -25,7 +25,7 @@ export default function Socials() {
     {
       title: "X",
       subtitle: "Follow us on X",
-      icon: <i class="fa-brands fa-x-twitter"></i>,
+      icon: <i className="fa-brands fa-x-twitter"></i>,
       link: `https://twitter.com/primate_ayodele`,
       color: "#000000",
     },

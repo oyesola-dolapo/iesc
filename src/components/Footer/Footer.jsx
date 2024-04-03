@@ -21,23 +21,7 @@ export default function Footer() {
     },
   ];
 
-  const socials = [
-    {
-      title: "Facebook",
-      icon: <i class="fa-brands fa-facebook-f"></i>,
-      link: `https://web.facebook.com/IESCWorldwide`,
-    },
-    {
-      title: "x",
-      icon: <i class="fa-brands fa-x-twitter"></i>,
-      link: `https://twitter.com/primate_ayodele`,
-    },
-    {
-      title: "tiktok",
-      icon: <i class="fa-brands fa-tiktok"></i>,
-      link: `https://www.tiktok.com/@primateayodele`,
-    },
-  ];
+  
   return (
     <footer className=" bg-grayBg text-white p-4 py-6 sm:px-[2rem] flex flex-col gap-8 xl:gap-4 xl:flex-row w-full xl:justify-between xl:px-[6rem]">
       <div id="contact" className="flex flex-col gap-4">
@@ -75,7 +59,7 @@ export default function Footer() {
         <ul>
           {footerLinks.map((link) => {
             return (
-              <li className="px-2  hover:text-webColor">
+              <li key={link.title} className="px-2 hover:text-webColor">
                 <Link to={link.link}>{link.title}</Link>
               </li>
             );
@@ -106,22 +90,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* <div>
-        <div className="socials">
-          <h1 className="text-[1.2rem] font-medium">SOCIALS</h1>
-          <ul className="flex gap-4 px-2">
-            {socials.map((link) => {
-              return (
-                <li>
-                  <Link target="_blank" to={link.link}>
-                    {link.icon}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div> */}
+      
     </footer>
   );
 }

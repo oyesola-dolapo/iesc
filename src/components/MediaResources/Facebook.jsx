@@ -40,14 +40,15 @@ export default function Facebook() {
         } sm:flex sm:justify-between lg:gap-[1.5rem] lg:flex-wrap lg:w-[90%] lg:mx-auto`}>
         {links.map((link) => {
           return (
-            <div className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0">
+            <div
+              className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0"
+              key={link.id}>
               <iframe
                 src={link.link}
                 scrolling="no"
                 frameborder="0"
-                allowfullscreen="true"
+                allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"
                 className="w-full h-[12.5rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] lg:text-[1rem]">{link.title}</p>
             </div>

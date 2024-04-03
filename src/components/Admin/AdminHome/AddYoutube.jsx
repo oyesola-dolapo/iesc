@@ -108,10 +108,10 @@ export default function AddYoutube() {
               <iframe
                 src={link.link}
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className="w-full h-[15rem] sm:h-[20rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p

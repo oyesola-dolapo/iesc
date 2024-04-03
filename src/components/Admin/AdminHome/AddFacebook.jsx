@@ -104,9 +104,8 @@ export default function AddFacebook() {
                 src={link.link}
                 scrolling="no"
                 frameborder="0"
-                allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true"
+                allowFullScreen
                 className="w-full h-[15rem]  sm:h-[20rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p
