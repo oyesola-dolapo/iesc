@@ -7,7 +7,7 @@ export default function History() {
         <img
           src="/images/building/IMG_2583.webp"
           alt=""
-          className="h-[35vh] xl:h-[50vh] w-[100vw] object-cover opacity-[.5]  mb-[1rem]"
+          className="h-[35vh] xl:h-[40vh] w-[100vw] object-cover opacity-[.5]  mb-[1rem]"
         />
         <h1 className="uppercase absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-wider w-max mt-[1rem] text-white font-bold text-[1.5rem] xl:text-[2.5rem] p-0">
           church history

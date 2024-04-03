@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Nav() {
   const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState({});
+
+  const myVariants = {
+    hidden: {
+      opacity: 0,
+      y: 120,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
 
   const navLinks = [
     {
@@ -66,13 +78,17 @@ export default function Nav() {
       link: "/Media",
     },
     {
+      title: "Live",
+      link: "/Live",
+    },
+    {
       title: "RESOURCES",
       icon: <i className="fa-solid fa-sort-down"></i>,
       index: 0,
       sublinks: [
         {
           title: "Adult education",
-          link: "",
+          // link: "",
         },
         {
           title: "Sign Language",
@@ -144,7 +160,7 @@ export default function Nav() {
         className="w-[2rem] lg:w-[3rem] lg:h-[3rem]"
       />
       <ul
-        className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.9rem] text-webColor`}>
+        className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.8rem] text-webColor`}>
         {navLinks.map((link) => {
           return (
             <li className="navLink relative" key={link.title}>
@@ -156,7 +172,11 @@ export default function Nav() {
                 <span className="absolute h-2 bg-[#ddb057] bottom-0 left-0 w-0 transition-width duration-200 group-hover:w-full"></span>
               </Link>
               {link.sublinks && (
-                <ul
+                <motion.ul
+                  variants={myVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 0.4 }}
                   className={`sub-link absolute top-[3.8rem] w-[15rem] bg-white flex flex-col shadow-lg  ${
                     link.index === 0 ? "left-[-100%]" : ""
                   }`}>
@@ -169,7 +189,7 @@ export default function Nav() {
                       </Link>
                     </li>
                   ))}
-                </ul>
+                </motion.ul>
               )}
             </li>
           );

@@ -9,14 +9,14 @@ export default function Footer() {
     },
     {
       title: "Contact Us",
-      link: "",
+      // link: "",
     },
     {
       title: "Online Giving",
-      link: "",
+      // link: "",
     },
     {
-      title: "Media Resources",
+      title: "Media Connect",
       link: "/Media",
     },
   ];
@@ -39,7 +39,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className=" bg-grayBg text-white p-4 py-6 mt-[2rem] sm:px-[2rem] flex flex-col gap-8 xl:gap-4 xl:flex-row w-full xl:justify-between xl:px-[6rem]">
+    <footer className=" bg-grayBg text-white p-4 py-6 sm:px-[2rem] flex flex-col gap-8 xl:gap-4 xl:flex-row w-full xl:justify-between xl:px-[6rem]">
       <div id="contact" className="flex flex-col gap-4">
         <div>
           <h1 className="text-[1.2rem] font-medium">CONTACT</h1>
@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <div className="socials">
           <h1 className="text-[1.2rem] font-medium">SOCIALS</h1>
           <ul className="flex gap-4 px-2">
@@ -121,7 +121,7 @@ export default function Footer() {
             })}
           </ul>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

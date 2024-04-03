@@ -13,6 +13,8 @@ import MeetPrimate from "./components/PrimateOffice/MeetPrimate.jsx";
 import Auth from "./components/Admin/AdminAuth/Auth.jsx";
 import Media from "./components/MediaResources/Media.jsx";
 import Whatsapp from "./components/Whatsapp/Whatsapp.jsx";
+import Live from "./components/Live/Live.jsx";
+import Socials from "./components/Socials/Socials.jsx";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -57,6 +59,7 @@ function App() {
           <Route path="/sunday" element={<Sunday />} />
           <Route path="/MeetPrimate" element={<MeetPrimate />} />
           <Route path="/Media" element={<Media />} />
+          <Route path="/Live" element={<Live />} />
           <Route path="/iescAdmin" element={<Auth />} />
         </Routes>
         <Whatsapp />
@@ -67,10 +70,11 @@ function App() {
             animate="visible"
             transition={{ duration: 0.4 }}
             onClick={top}
-            className="toTop fixed bottom-[5rem] right-[1rem] cursor-pointer bg-webColor w-[3rem] h-[3rem] flex justify-center items-center rounded-full">
+            className="toTop shadow fixed bottom-[5rem] right-[1rem] cursor-pointer bg-webColor w-[3rem] h-[3rem] flex justify-center items-center rounded-full">
             <i className="fa-solid fa-arrow-up text-black text-[1.5rem]"></i>
           </motion.div>
         )}
+        <Socials />
         <Footer />
       </main>
     </Router>
