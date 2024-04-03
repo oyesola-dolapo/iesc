@@ -6,6 +6,7 @@ export default function Live() {
   const [ytLink, setYtLink] = useState([]);
   const [fbLink, setFbLink] = useState([]);
   const [tkLink, setTkLink] = useState([]);
+  const [showLive, setShowLive] = useState(false);
 
   const ytCollection = collection(db, "youtubeLive");
   const fbCollection = collection(db, "facebookLive");
@@ -113,10 +114,16 @@ export default function Live() {
                   {item.title}
                 </div>
               </a>
-              <p className="tracking-wider mt-[.2rem] text-center font-medium text-[#ff0000]">
-                <i className="fa-solid fa-podcast mr-[.5rem]"></i>
-                We are Live
-              </p>
+              {/* {item.link.length > 5 && (
+                <p
+                  className="tracking-wider mt-[.2rem] text-center font-medium text-[#ff0000]"
+                  onClick={() => {
+                    console.log(item.link.length);
+                  }}>
+                  <i className="fa-solid fa-podcast mr-[.5rem]"></i>
+                  We are Live
+                </p>
+              )} */}
             </div>
           );
         })}
