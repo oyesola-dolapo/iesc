@@ -15,6 +15,7 @@ import Media from "./components/MediaResources/Media.jsx";
 import Whatsapp from "./components/Whatsapp/Whatsapp.jsx";
 import Live from "./components/Live/Live.jsx";
 import Socials from "./components/Socials/Socials.jsx";
+import AdultEducation from "./components/AdultEducation/AdultEducation.jsx";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -61,6 +62,7 @@ function App() {
           <Route path="/Media" element={<Media />} />
           <Route path="/Live" element={<Live />} />
           <Route path="/iescAdmin" element={<Auth />} />
+          <Route path="/Adult" element={<AdultEducation />} />
         </Routes>
         <Whatsapp />
         {visible && (

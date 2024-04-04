@@ -88,7 +88,7 @@ export default function Nav() {
       sublinks: [
         {
           title: "Adult education",
-          // link: "",
+          link: "/Adult",
         },
         {
           title: "Sign Language",

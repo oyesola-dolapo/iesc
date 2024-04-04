@@ -102,7 +102,6 @@ export default function Live() {
             <div key={item.title}>
               <a
                 href={item.link}
-                target="_blank"
                 className={`relative flex rounded overflow-hidden w-[22rem] lg:w-[24rem] h-[3.5rem] lg:h-[4rem]`}
                 style={{ backgroundColor: item.color }}>
                 <div
