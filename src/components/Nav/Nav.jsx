@@ -155,7 +155,7 @@ export default function Nav() {
 
   return (
     <nav className="backdrop-filter backdrop-blur-sm shadow-lg absolute top-0 left-0  w-screen z-[99] h-max px-[1rem] py-[.8rem] z-1 lg:py-0  lg:px-[4rem] flex items-center justify-between">
-      <img src="./images/multiLogo.webp" alt="" className="w-[6rem] lg:w-[12rem]" />
+      <img src="./images/multiLogo.webp" alt="" className="w-[6rem] lg:w-[14rem]" />
       <ul
         className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.9rem] text-webColor`}>
         {navLinks.map((link) => {

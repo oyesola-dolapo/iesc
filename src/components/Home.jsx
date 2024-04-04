@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <section id="Home" className="relative">
       <Landing />
-      <div className="w-full">
+      {/* <div className="w-full">
         <Location />
-      </div>
+      </div> */}
     </section>
   );
 }
