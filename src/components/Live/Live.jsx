@@ -59,6 +59,7 @@ export default function Live() {
 
   const items = [
     {
+      key: 1,
       title: "Youtube",
       icon: <i className="fa-brands fa-youtube"></i>,
       color: "#ff0000",
@@ -67,6 +68,17 @@ export default function Live() {
       }),
     },
     {
+      key: 2,
+      title: "Youtube",
+      subtitle: "(INRI HALF HOUR)",
+      icon: <i className="fa-brands fa-youtube"></i>,
+      color: "#ff0000",
+      link: ytLink.map((link) => {
+        return link.link;
+      }),
+    },
+    {
+      key: 3,
       title: "Facebook",
       icon: <i className="fa-brands fa-facebook"></i>,
       color: "#1877F2",
@@ -75,7 +87,28 @@ export default function Live() {
       }),
     },
     {
+      key: 4,
+      title: "Facebook",
+      subtitle: "(INRI HALF HOUR)",
+      icon: <i className="fa-brands fa-facebook"></i>,
+      color: "#1877F2",
+      link: fbLink.map((link) => {
+        return link.link;
+      }),
+    },
+    {
+      key: 5,
       title: "TikTok",
+      icon: <i className="fa-brands fa-tiktok"></i>,
+      color: "#000000",
+      link: tkLink.map((link) => {
+        return link.link;
+      }),
+    },
+    {
+      key: 6,
+      title: "TikTok",
+      subtitle: "(INRI HALF HOUR)",
       icon: <i className="fa-brands fa-tiktok"></i>,
       color: "#000000",
       link: tkLink.map((link) => {
@@ -99,7 +132,7 @@ export default function Live() {
       <div className="w-[100vw] justify-center flex flex-wrap lg:justify-center gap-[.8rem] lg:gap-[2rem]">
         {items.map((item) => {
           return (
-            <div key={item.title}>
+            <div key={item.key}>
               <a
                 href={item.link}
                 className={`relative flex rounded overflow-hidden w-[22rem] lg:w-[24rem] h-[3.5rem] lg:h-[4rem]`}
@@ -109,8 +142,9 @@ export default function Live() {
                   style={{ backgroundColor: "rgba(0, 0, 0, .2)" }}>
                   {item.icon}
                 </div>
-                <div className="w-[100%] h-full font-bold tracking-wider text-[1.2rem] text-white flex justify-center items-center">
-                  {item.title}
+                <div className="w-[100%] h-full  tracking-wider text-white flex flex-col justify-center items-center">
+                  <p className="font-bold  text-[1.2rem]">{item.title}</p>
+                  <p className="text-[.8rem]">{item.subtitle}</p>
                 </div>
               </a>
               {/* {item.link.length > 5 && (

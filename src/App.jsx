@@ -57,7 +57,7 @@ function App() {
           <Route path="/*" element={<Home />} />
           <Route path="/Vision" element={<Vision />} />
           <Route path="/ChurchHistory" element={<History />} />
-          <Route path="/sunday" element={<Sunday />} />
+          <Route path="/Parishes" element={<Sunday />} />
           <Route path="/MeetPrimate" element={<MeetPrimate />} />
           <Route path="/Media" element={<Media />} />
           <Route path="/Live" element={<Live />} />

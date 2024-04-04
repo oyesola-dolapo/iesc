@@ -53,6 +53,10 @@ export default function Nav() {
           title: "Our Belief",
           // link: "",
         },
+        {
+          title: "Parishes",
+          link: "/Parishes",
+        },
       ],
     },
 
@@ -60,12 +64,9 @@ export default function Nav() {
       title: "programs",
       icon: <i className="fa-solid fa-sort-down"></i>,
       sublinks: [
-        {
-          title: "Sunday Service",
-          link: "/sunday",
-        },
         { title: "God will not put me  to shame" },
         { title: "freedom and deliverance" },
+        { title: "anointing service" },
         { title: "food service" },
         { title: "galilee" },
       ],
@@ -154,11 +155,7 @@ export default function Nav() {
 
   return (
     <nav className="backdrop-filter backdrop-blur-sm shadow-lg absolute top-0 left-0  w-screen z-[99] h-max px-[1rem] py-[.8rem] z-1 lg:py-0  lg:px-[4rem] flex items-center justify-between">
-      <img
-        src="./images/logo.webp"
-        alt=""
-        className="w-[2rem] lg:w-[3rem] lg:h-[3rem]"
-      />
+      <img src="./images/multiLogo.webp" alt="" className="w-[6rem] lg:w-[12rem]" />
       <ul
         className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.9rem] text-webColor`}>
         {navLinks.map((link) => {
