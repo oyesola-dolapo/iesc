@@ -3,15 +3,17 @@ import React from "react";
 export default function AdultEducation() {
   return (
     <div className="min-h-[100vh] pt-[4.5rem] px-[1rem] lg:px-[8rem]">
-      <h1 className="text-center font-bold mb-[1rem] lg:text-[1.5rem]">
+      <h1 className="text-center font-bold mb-[1rem] lg:text-[2rem]">
         ADULT <span className="text-textGold">EDUCATION</span>
       </h1>
       <div className="tracking-wide lg:text-[1.2rem]">
-        <img
-          src="../images/member/IMG_1265.webp"
-          alt=""
-          className="w-[30rem] object-cover float-left mr-[1rem]"
-        />
+        <div className="w-[30rem] object-cover float-left mr-[1rem]">
+          <img
+            src="../images/member/IMG_1265.webp"
+            alt=""
+            className="object-cover"
+          />
+        </div>
         In today's fast-paced world, navigating through life without essential
         academic skills can be daunting. At INRI Evangelical Spiritual Church,
         we recognize the profound impact education has on individuals and
@@ -27,11 +29,13 @@ export default function AdultEducation() {
         financial constraints, prior obligations, or simply lacking access to
         resources. By offering free classes and flexible schedules, we break
         down these barriers and open doors to opportunity. <br /> <br />{" "}
-        <img
-          src="../images/member/IMG_1278.webp"
-          alt=""
-          className="float-right w-[30rem] object-cover"
-        />{" "}
+        <div className="float-right w-[30rem] object-cover">
+          <img
+            src="../images/member/IMG_1278.webp"
+            alt=""
+            className="object-cover"
+          />
+        </div>{" "}
         But our program goes beyond just teaching academic subjects. We foster a
         sense of community and support, where individuals from diverse
         backgrounds come together to learn and grow. Through encouragement and
