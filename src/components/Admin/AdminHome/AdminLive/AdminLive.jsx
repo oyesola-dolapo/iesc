@@ -26,6 +26,7 @@ export default function AdminLive() {
   const [fbHalfLink, setFbHalfLink] = useState([]);
   const [ytHalfLink, setYtHalfLink] = useState([]);
 
+
   const ytCollection = collection(db, "youtubeLive");
   const fbCollection = collection(db, "facebookLive");
   const tkCollection = collection(db, "tiktokLive");
@@ -258,7 +259,7 @@ export default function AdminLive() {
     try {
       await deleteDoc(linkDoc);
       toast.success("Successfully Deleted", autoClose);
-      getYtLink();
+      getYtHalfLink();
     } catch (err) {
       toast.error("Error deleting link", autoClose);
       console.log(err);

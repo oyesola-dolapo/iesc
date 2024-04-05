@@ -9,7 +9,7 @@ export default function Live() {
   const [tkHalfLink, setTkHalfLink] = useState([]);
   const [fbHalfLink, setFbHalfLink] = useState([]);
   const [ytHalfLink, setYtHalfLink] = useState([]);
-  const [showLive, setShowLive] = useState(false);
+  const [show, setShow] = useState(false);
 
   const ytCollection = collection(db, "youtubeLive");
   const fbCollection = collection(db, "facebookLive");
@@ -18,84 +18,85 @@ export default function Live() {
   const fbHalfCollection = collection(db, "facebookHalfHour");
   const ytHalfCollection = collection(db, "youtubeHalfHour");
 
+  const getFbLink = async () => {
+    try {
+      const data = await getDocs(fbCollection);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setFbLink(filteredData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getFbHalfLink = async () => {
+    try {
+      const data = await getDocs(fbHalfCollection);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setFbHalfLink(filteredData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getYtLink = async () => {
+    try {
+      const data = await getDocs(ytCollection);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setYtLink(filteredData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getYtHalfLink = async () => {
+    try {
+      const data = await getDocs(ytHalfCollection);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setYtHalfLink(filteredData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getTkLink = async () => {
+    try {
+      const data = await getDocs(tkCollection);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setTkLink(filteredData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getTkHalfLink = async () => {
+    try {
+      const data = await getDocs(tkHalfCollection);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setTkHalfLink(filteredData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    const getFbLink = async () => {
-      try {
-        const data = await getDocs(fbCollection);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setFbLink(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    const getFbHalfLink = async () => {
-      try {
-        const data = await getDocs(fbHalfCollection);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setFbHalfLink(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    const getYtLink = async () => {
-      try {
-        const data = await getDocs(ytCollection);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setYtLink(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    const getYtHalfLink = async () => {
-      try {
-        const data = await getDocs(ytHalfCollection);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setYtHalfLink(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    const getTkLink = async () => {
-      try {
-        const data = await getDocs(tkCollection);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setTkLink(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    const getTkHalfLink = async () => {
-      try {
-        const data = await getDocs(tkHalfCollection);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setTkHalfLink(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
     getFbLink();
     getFbHalfLink();
     getYtLink();
@@ -194,16 +195,22 @@ export default function Live() {
                   <p className="text-[.8rem]">{item.subtitle}</p>
                 </div>
               </a>
-              {/* {item.link.length > 5 && (
-                <p
-                  className="tracking-wider mt-[.2rem] text-center font-medium text-[#ff0000]"
-                  onClick={() => {
-                    console.log(item.link.length);
-                  }}>
-                  <i className="fa-solid fa-podcast mr-[.5rem]"></i>
-                  We are Live
-                </p>
-              )} */}
+              {item.link.map((linkItem, index) => {
+                if (linkItem && linkItem.length > 5) {
+                  return (
+                    <p
+                      key={index}
+                      className="tracking-wider mt-[.2rem] text-center font-medium text-[#ff0000]"
+                      onClick={() => {
+                        console.log(linkItem.length);
+                      }}>
+                      <i className="fa-solid fa-podcast mr-[.5rem]"></i>
+                      We are Live
+                    </p>
+                  );
+                }
+                return null;
+              })}
             </div>
           );
         })}
