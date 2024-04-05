@@ -57,10 +57,10 @@ export default function QuickLink() {
     },
   ];
   return (
-    <div className="flex w-[60%] mx-auto flex-wrap justify-center gap-[1rem]">
+    <div className="flex lg:w-[60%] lg:mx-auto flex-wrap justify-center gap-[1.5rem] lg:gap-[1rem] px-[1rem] lx:px-0">
       {links.map((link) => {
         return (
-          <div className="relative shadow w-[17rem] h-[19rem] px-[1rem] flex flex-col items-center pt-[2rem] rounded bg-gray-100">
+          <div className="relative shadow lg:w-[17rem] h-[19rem] px-[2.5rem] lg:px-[1rem] flex flex-col items-center pt-[2rem] rounded bg-gray-100">
             <h1 className="font-bold text-[1.8rem] mb-[.6rem] uppercase text-center">
               {link.title}
             </h1>
