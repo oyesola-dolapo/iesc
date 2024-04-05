@@ -41,6 +41,10 @@ tr {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+input[type="date"] {
+  -webkit-appearance: textfield; 
+}
+
 .navLinkHover {
   position: relative;
 }
