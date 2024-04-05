@@ -21,7 +21,7 @@ export default function AdminHome() {
         "This section allows you to seamlessly add and manage video and live links.",
       btn: {
         title: "View Registration",
-        link: "iescAdmin/Registartion",
+        link: "iescAdmin/Registration",
       },
     },
   ];
