@@ -7,7 +7,7 @@ export default function AdultEducation() {
         ADULT <span className="text-textGold">EDUCATION</span>
       </h1>
       <div className="tracking-wide lg:text-[1.2rem]">
-        <div className="w-[30rem] object-cover float-left mr-[1rem]">
+        <div className="lg:w-[30rem] object-cover float-left mr-[1rem]">
           <img
             src="../images/member/IMG_1265.webp"
             alt=""
@@ -29,7 +29,7 @@ export default function AdultEducation() {
         financial constraints, prior obligations, or simply lacking access to
         resources. By offering free classes and flexible schedules, we break
         down these barriers and open doors to opportunity. <br /> <br />{" "}
-        <div className="float-right w-[30rem] object-cover">
+        <div className="float-right lg:w-[30rem] object-cover">
           <img
             src="../images/member/IMG_1278.webp"
             alt=""
