@@ -8,6 +8,8 @@ import {
 } from "firebase/auth";
 import Login from "../Login/Login";
 import AdminHome from "../AdminHome/AdminHome";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const AuthContext = createContext();
 
@@ -32,7 +34,9 @@ export default function Auth() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setLoginErr(false);
+      toast.success("Successfully signed in..");
     } catch (err) {
+      toast.error("Failed to sign in");
       if (err.code === "auth/invalid-credential") {
         setLoginErr(true);
       }

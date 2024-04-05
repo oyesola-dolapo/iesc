@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../config/firebase";
 import { collection, getDocs, doc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 export default function Youtube() {
   const [links, setLinks] = useState([]);
@@ -8,6 +9,8 @@ export default function Youtube() {
   const linkCollectionRef = collection(db, "youtube");
 
   useEffect(() => {
+    toast.info("Loading...", {autoClose: 600});
+
     const getLink = async () => {
       try {
         const data = await getDocs(linkCollectionRef);

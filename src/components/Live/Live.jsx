@@ -6,11 +6,17 @@ export default function Live() {
   const [ytLink, setYtLink] = useState([]);
   const [fbLink, setFbLink] = useState([]);
   const [tkLink, setTkLink] = useState([]);
+  const [tkHalfLink, setTkHalfLink] = useState([]);
+  const [fbHalfLink, setFbHalfLink] = useState([]);
+  const [ytHalfLink, setYtHalfLink] = useState([]);
   const [showLive, setShowLive] = useState(false);
 
   const ytCollection = collection(db, "youtubeLive");
   const fbCollection = collection(db, "facebookLive");
   const tkCollection = collection(db, "tiktokLive");
+  const tkHalfCollection = collection(db, "tiktokHalfHour");
+  const fbHalfCollection = collection(db, "facebookHalfHour");
+  const ytHalfCollection = collection(db, "youtubeHalfHour");
 
   useEffect(() => {
     const getFbLink = async () => {
@@ -21,6 +27,18 @@ export default function Live() {
           id: doc.id,
         }));
         setFbLink(filteredData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    const getFbHalfLink = async () => {
+      try {
+        const data = await getDocs(fbHalfCollection);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setFbHalfLink(filteredData);
       } catch (err) {
         console.log(err);
       }
@@ -39,6 +57,19 @@ export default function Live() {
       }
     };
 
+    const getYtHalfLink = async () => {
+      try {
+        const data = await getDocs(ytHalfCollection);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setYtHalfLink(filteredData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
     const getTkLink = async () => {
       try {
         const data = await getDocs(tkCollection);
@@ -52,9 +83,25 @@ export default function Live() {
       }
     };
 
+    const getTkHalfLink = async () => {
+      try {
+        const data = await getDocs(tkHalfCollection);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setTkHalfLink(filteredData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
     getFbLink();
+    getFbHalfLink();
     getYtLink();
+    getYtHalfLink();
     getTkLink();
+    getTkHalfLink();
   }, []);
 
   const items = [
@@ -73,7 +120,7 @@ export default function Live() {
       subtitle: "(INRI HALF HOUR)",
       icon: <i className="fa-brands fa-youtube"></i>,
       color: "#ff0000",
-      link: ytLink.map((link) => {
+      link: ytHalfLink.map((link) => {
         return link.link;
       }),
     },
@@ -92,7 +139,7 @@ export default function Live() {
       subtitle: "(INRI HALF HOUR)",
       icon: <i className="fa-brands fa-facebook"></i>,
       color: "#1877F2",
-      link: fbLink.map((link) => {
+      link: fbHalfLink.map((link) => {
         return link.link;
       }),
     },
@@ -111,7 +158,7 @@ export default function Live() {
       subtitle: "(INRI HALF HOUR)",
       icon: <i className="fa-brands fa-tiktok"></i>,
       color: "#000000",
-      link: tkLink.map((link) => {
+      link: tkHalfLink.map((link) => {
         return link.link;
       }),
     },

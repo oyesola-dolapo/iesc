@@ -123,6 +123,11 @@ export default function Nav() {
           title: "careers",
           // link: "",
         },
+        {
+          title: "register",
+          style: "text-center underline"
+          // link: "",
+        },
       ],
     },
   ];
@@ -180,7 +185,7 @@ export default function Nav() {
                   {link.sublinks.map((sublink) => (
                     <li key={sublink.title}>
                       <Link to={sublink.link} className={` rounded-lg `}>
-                        <p className="hover:bg-webColor text-textGold hover:text-black duration-[300ms] px-4 py-3 uppercase">
+                        <p className={`hover:bg-webColor text-textGold hover:text-black duration-[300ms] px-4 py-3 uppercase ${sublink.style}`}>
                           {sublink.title}
                         </p>
                       </Link>

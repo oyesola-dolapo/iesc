@@ -16,6 +16,8 @@ import Whatsapp from "./components/Whatsapp/Whatsapp.jsx";
 import Live from "./components/Live/Live.jsx";
 import Socials from "./components/Socials/Socials.jsx";
 import AdultEducation from "./components/AdultEducation/AdultEducation.jsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -51,6 +53,7 @@ function App() {
   return (
     <Router>
       <main className="relative">
+        <ToastContainer />
         <ScrollToTop />
         <Nav />
         <Routes>

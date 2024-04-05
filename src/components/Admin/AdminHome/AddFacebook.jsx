@@ -7,6 +7,7 @@ import {
   addDoc,
   deleteDoc,
 } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 export default function AddFacebook() {
   const [fbVid, setFbVid] = useState([]);
@@ -43,20 +44,28 @@ export default function AddFacebook() {
     e.preventDefault();
     try {
       await addDoc(linkCollectionRef, { link: fbLink, title: fbTitle });
+      toast.success("Successfully Added");
       getLink();
+      setFbLink("");
+      setFbTitle("");
     } catch (err) {
+      toast.error("Error");
       console.log(err);
     }
   };
+
   const handleDelete = async (id) => {
     const linkDoc = doc(db, "facebook", id);
     try {
       await deleteDoc(linkDoc);
+      toast.success("Successfully Deleted");
       getLink();
     } catch (err) {
       console.log(err);
+      toast.error("Successfully Added");
     }
   };
+
   return (
     <div className="Youtube w-full lg:w-[25rem]">
       <h1 className=" font-bold tracking-wide mb-[.5rem]">ADD YOUTUBE</h1>

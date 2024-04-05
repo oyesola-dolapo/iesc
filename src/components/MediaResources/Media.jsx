@@ -25,7 +25,7 @@ export default function Media() {
   };
 
   return (
-    <div className="min-h-[90vh] pt-[5rem]">
+    <div className="min-h-[90vh] pt-[6rem]">
       <ul className="flex mx-auto justify-center mb-[1.5rem]">
         {sections.map((section) => {
           return (

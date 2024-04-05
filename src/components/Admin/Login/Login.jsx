@@ -6,7 +6,7 @@ function Login() {
     useContext(AuthContext);
 
   return (
-    <div className="pt-[4rem] w-[100vw] flex flex-col-reverse lg:flex-row">
+    <div className="pt-[6rem] w-[100vw] flex flex-col-reverse lg:flex-row">
       <div className="w-full lg:w-1/2 flex flex-col items-center my-auto px-[1rem]">
         <h1 className="mt-[1rem] lg:my-[0] hidden lg:flex uppercase font-medium text-[1.5rem]">
           Welcome back, <span className="text-webColor">Admin</span>
@@ -48,11 +48,11 @@ function Login() {
               placeholder="Enter Password"
               className="lg:w-[30rem] h-[3rem] border-2 border-solid border-webColor rounded-lg px-4"
             />
-            {loginErr && (
+            {/* {loginErr && (
               <p className="text-[#d32f2f] tracking-wider text-[12px] mt-[.4rem] mb-[1rem] shake">
                 Invalid email or password
               </p>
-            )}
+            )} */}
           </div>
           <button
             type="submit"

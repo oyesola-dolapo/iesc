@@ -7,6 +7,7 @@ import {
   addDoc,
   deleteDoc,
 } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 export default function AddYoutube() {
   const [ytVid, setYtVid] = useState([]);
@@ -43,10 +44,12 @@ export default function AddYoutube() {
     e.preventDefault();
     try {
       await addDoc(linkCollectionRef, { link: ytLink, title: ytTitle });
+      toast.success("Successfully Added");
       getLink();
       setYtLink("");
       setYtTitle("");
     } catch (err) {
+      toast.error("Error");
       console.log(err);
     }
   };
@@ -54,8 +57,10 @@ export default function AddYoutube() {
     const linkDoc = doc(db, "youtube", id);
     try {
       await deleteDoc(linkDoc);
+      toast.success("Successfully Deleted");
       getLink();
     } catch (err) {
+      toast.error("Error");
       console.log(err);
     }
   };

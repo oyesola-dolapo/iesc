@@ -10,7 +10,7 @@ export default function AdminHome() {
   const { handleSignOut, loggedIn } = useContext(AuthContext);
 
   return (
-    <div className="pt-[4.5rem] px-[1rem] lg:px-[2rem]">
+    <div className="pt-[6rem] px-[1rem] lg:px-[2rem]">
       <div className="flex justify-between items-center">
         <h1 className="lg:text-[1.5rem]">WELCOME TO THE HOME PAGE</h1>
         <button
