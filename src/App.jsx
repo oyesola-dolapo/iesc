@@ -18,6 +18,7 @@ import Socials from "./components/Socials/Socials.jsx";
 import AdultEducation from "./components/AdultEducation/AdultEducation.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AddLink from "./components/Admin/AdminHome/AddLink/AddLink.jsx";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -65,6 +66,7 @@ function App() {
           <Route path="/Media" element={<Media />} />
           <Route path="/Live" element={<Live />} />
           <Route path="/iescAdmin" element={<Auth />} />
+          <Route path="/iescAdmin/Links" element={<AddLink />} />
           <Route path="/Adult" element={<AdultEducation />} />
         </Routes>
         <Whatsapp />

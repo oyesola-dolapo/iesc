@@ -16,8 +16,7 @@ function Login() {
         </h1>
         <form
           action=""
-          onSubmit={(e) => {
-            e.preventDefault();
+          onSubmit={() => {
             handleSignIn();
           }}
           className="my-[1rem] lg:my-[2rem] w-full lg:w-max">

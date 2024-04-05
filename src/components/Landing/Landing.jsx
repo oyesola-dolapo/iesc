@@ -81,7 +81,7 @@ export default function Landing() {
               variants={myVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.7, delay: 1.5 }}
+              transition={{ duration: 0.7, delay: 0.8 }}
               className="text-white uppercase text-[1.8rem] sm:text-[2.2rem] lg:text-[4rem] font-bold">
               welcome to inri evangelical spiritual{" "}
               <span className="text-webColor">church</span>
@@ -90,7 +90,7 @@ export default function Landing() {
               variants={myVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.7, delay: 3.5 }}
+              transition={{ duration: 0.7, delay: 2.3 }}
               className="font-medium mt-4 sm:text-[1rem] lg:text-[1.5rem] lg:px-[10rem]">
               <p>{cover.writeup}</p>
               <p>{cover.verse}</p>
@@ -99,7 +99,7 @@ export default function Landing() {
               variants={myVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.7, delay: 2.5 }}
+              transition={{ duration: 0.7, delay: 1.6 }}
               className="mt-8">
               <Link
                 to="/Media"

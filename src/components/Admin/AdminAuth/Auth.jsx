@@ -30,7 +30,8 @@ export default function Auth() {
     setPassword(e.target.value);
   };
 
-  const handleSignIn = async () => {
+  const handleSignIn = async (e) => {
+    e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setLoginErr(false);
