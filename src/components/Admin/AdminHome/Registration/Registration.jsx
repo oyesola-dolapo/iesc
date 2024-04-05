@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import { db } from "../../../../config/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 export default function Registration() {
   const [data, setData] = useState([]);
 
   const dataCollectionRef = collection(db, "registration");
+
+  const autoClose = { autoClose: 800 };
 
   const getLink = async () => {
     try {
@@ -23,6 +26,19 @@ export default function Registration() {
   useEffect(() => {
     getLink();
   }, []);
+
+  const handleDelete = async (id) => {
+    const linkDoc = doc(db, "registration", id);
+    try {
+      await deleteDoc(linkDoc);
+      toast.success("Successfully Deleted", autoClose);
+      getLink();
+    } catch (err) {
+      console.log(err);
+      toast.error("Error", autoClose);
+    }
+  };
+
   return (
     <div className="min-h-[100vh] pt-[5rem] flex flex-col">
       <h1 className="text-center text-[1.4rem] font-bold mb-[1rem]">
@@ -59,6 +75,13 @@ export default function Registration() {
                 <td>{item.city}</td>
                 <td>{item.state}</td>
                 <td>{item.country}</td>
+                <td
+                  onClick={() => {
+                    handleDelete(item.id);
+                  }}
+                  className="cursor-pointer">
+                  <i class="fa-solid fa-trash text-[#ff0000]"></i>
+                </td>
               </tr>
             ))}
           </tbody>

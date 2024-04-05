@@ -64,7 +64,7 @@ export default function AddFacebook() {
       getLink();
     } catch (err) {
       console.log(err);
-      toast.error("Successfully Added", autoClose);
+      toast.error("Error", autoClose);
     }
   };
 
