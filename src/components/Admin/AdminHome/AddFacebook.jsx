@@ -70,7 +70,7 @@ export default function AddFacebook() {
 
   return (
     <div className="Youtube w-full lg:w-[25rem]">
-      <h1 className=" font-bold tracking-wide mb-[.5rem]">ADD YOUTUBE</h1>
+      <h1 className=" font-bold tracking-wide mb-[.5rem]">ADD FACEBOOK</h1>
       <form action="" onSubmit={handleSubmit}>
         <div className="flex flex-col">
           {" "}
