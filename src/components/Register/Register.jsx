@@ -153,7 +153,6 @@ export default function Register() {
     },
   ];
 
-  console.log(department);
   return (
     <div className="min-h-[100vh] pt-[5rem]">
       <h1 className="text-center text-[1.4rem] font-bold mb-[1rem] uppercase">
