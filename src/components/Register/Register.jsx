@@ -84,46 +84,55 @@ export default function Register() {
   const forms = [
     {
       title: "First Name",
+      type: Text,
       input: handleFname,
       value: fname,
     },
     {
       title: "Last Name",
+      type: Text,
       input: handleSname,
       value: sname,
     },
     {
       title: "Phone No.",
+      type: "tel",
       input: handlePhone,
       value: phone,
     },
     {
       title: "Email",
+      type: "email",
       input: handleEmail,
       value: email,
     },
     {
       title: "Date of Birth",
+      type: "datetime-local",
       input: handleDob,
       value: dob,
     },
     {
       title: "Address",
+      type: Text,
       input: handleAddress,
       value: address,
     },
     {
       title: "City",
+      type: Text,
       input: handleCity,
       value: city,
     },
     {
       title: "State",
+      type: Text,
       input: handleState,
       value: state,
     },
     {
       title: "Country",
+      type: Text,
       input: handleCountry,
       value: country,
     },
@@ -151,7 +160,7 @@ export default function Register() {
     {
       value: "sign language",
     },
-    ];
+  ];
 
   return (
     <div className="min-h-[100vh] pt-[5rem]">
@@ -160,6 +169,7 @@ export default function Register() {
       </h1>
       <div className="px-[1rem]">
         <form action="" onSubmit={handleSubmit}>
+          input
           <div className="flex justify-center items-center">
             <label
               for="department"
@@ -171,7 +181,8 @@ export default function Register() {
               name="department"
               className="uppercase p-[.3rem] border-2 border-webColor rounded text-[.8rem]"
               onChange={handleDepartment}
-              value={department} required>
+              value={department}
+              required>
               <option value="" disabled unselected>
                 Select
               </option>
@@ -191,7 +202,7 @@ export default function Register() {
                     <span className="font-bold text-[#ff0000]">*</span>
                   </label>
                   <input
-                    type="text"
+                    type={form.type}
                     required
                     onChange={form.input}
                     value={form.value}
