@@ -84,13 +84,13 @@ export default function Register() {
   const forms = [
     {
       title: "First Name",
-      type: Text,
+      type: "text",
       input: handleFname,
       value: fname,
     },
     {
       title: "Last Name",
-      type: Text,
+      type: "text",
       input: handleSname,
       value: sname,
     },
@@ -108,31 +108,31 @@ export default function Register() {
     },
     {
       title: "Date of Birth",
-      type: "datetime-local",
+      type: "date",
       input: handleDob,
       value: dob,
     },
     {
       title: "Address",
-      type: Text,
+      type: "text",
       input: handleAddress,
       value: address,
     },
     {
       title: "City",
-      type: Text,
+      type: "text",
       input: handleCity,
       value: city,
     },
     {
       title: "State",
-      type: Text,
+      type: "text",
       input: handleState,
       value: state,
     },
     {
       title: "Country",
-      type: Text,
+      type: "text",
       input: handleCountry,
       value: country,
     },
@@ -169,7 +169,6 @@ export default function Register() {
       </h1>
       <div className="px-[1rem]">
         <form action="" onSubmit={handleSubmit}>
-          input
           <div className="flex justify-center items-center">
             <label
               for="department"
