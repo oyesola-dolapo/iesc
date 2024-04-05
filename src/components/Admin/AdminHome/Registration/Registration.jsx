@@ -24,7 +24,7 @@ export default function Registration() {
     getLink();
   }, []);
   return (
-    <div className="min-h-[100vh] pt-[5rem] flex flex-col overflow-scroll">
+    <div className="min-h-[100vh] pt-[5rem] flex flex-col">
       <h1 className="text-center text-[1.4rem] font-bold mb-[1rem]">
         Registered <span className="text-textGold">Data</span>
       </h1>
