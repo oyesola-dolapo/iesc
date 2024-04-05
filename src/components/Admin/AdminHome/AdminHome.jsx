@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AdminAuth/Auth";
-import { db } from "../../../config/firebase";
 
 export default function AdminHome() {
   const { handleSignOut, loggedIn } = useContext(AuthContext);
