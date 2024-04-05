@@ -14,6 +14,8 @@ export default function AddYoutube() {
   const [ytLink, setYtLink] = useState("");
   const [ytTitle, setYtTitle] = useState("");
 
+  const autoClose = { autoClose: 800 };
+
   const handleYtLink = (e) => {
     setYtLink(e.target.value);
   };
@@ -44,12 +46,12 @@ export default function AddYoutube() {
     e.preventDefault();
     try {
       await addDoc(linkCollectionRef, { link: ytLink, title: ytTitle });
-      toast.success("Successfully Added");
+      toast.success("Successfully Added", autoClose);
       getLink();
       setYtLink("");
       setYtTitle("");
     } catch (err) {
-      toast.error("Error");
+      toast.error("Error", autoClose);
       console.log(err);
     }
   };
@@ -57,10 +59,10 @@ export default function AddYoutube() {
     const linkDoc = doc(db, "youtube", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getLink();
     } catch (err) {
-      toast.error("Error");
+      toast.error("Error", autoClose);
       console.log(err);
     }
   };

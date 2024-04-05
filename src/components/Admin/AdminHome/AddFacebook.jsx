@@ -14,6 +14,8 @@ export default function AddFacebook() {
   const [fbLink, setFbLink] = useState("");
   const [fbTitle, setFbTitle] = useState("");
 
+  const autoClose = { autoClose: 800 };
+
   const handleFbLink = (e) => {
     setFbLink(e.target.value);
   };
@@ -44,12 +46,12 @@ export default function AddFacebook() {
     e.preventDefault();
     try {
       await addDoc(linkCollectionRef, { link: fbLink, title: fbTitle });
-      toast.success("Successfully Added");
+      toast.success("Successfully Added", autoClose);
       getLink();
       setFbLink("");
       setFbTitle("");
     } catch (err) {
-      toast.error("Error");
+      toast.error("Error", autoClose);
       console.log(err);
     }
   };
@@ -58,11 +60,11 @@ export default function AddFacebook() {
     const linkDoc = doc(db, "facebook", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getLink();
     } catch (err) {
       console.log(err);
-      toast.error("Successfully Added");
+      toast.error("Successfully Added", autoClose);
     }
   };
 

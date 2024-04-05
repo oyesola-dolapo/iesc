@@ -33,6 +33,8 @@ export default function AdminLive() {
   const fbHalfCollection = collection(db, "facebookHalfHour");
   const ytHalfCollection = collection(db, "youtubeHalfHour");
 
+  const autoClose = { autoClose: 800 };
+
   // GET DB LINKS
   const getFbLink = async () => {
     try {
@@ -145,11 +147,11 @@ export default function AdminLive() {
   const updateYt = async (id) => {
     try {
       await setDoc(doc(ytCollection, id), { link: yt });
-      toast.success("Link Successfully Added..");
+      toast.success("Link Successfully Added..", autoClose);
       setYt("");
       getYtLink();
     } catch (err) {
-      toast.error("Error adding link");
+      toast.error("Error adding link", autoClose);
       console.log(err);
     }
   };
@@ -157,60 +159,60 @@ export default function AdminLive() {
   const updateYtHalf = async (id) => {
     try {
       await setDoc(doc(ytHalfCollection, id), { link: ytHalf });
-      toast.success("Link Successfully Added..");
+      toast.success("Link Successfully Added..", autoClose);
       setYtHalf("");
       getYtHalfLink();
     } catch (err) {
       console.log(err);
-      toast.error("Error adding link");
+      toast.error("Error adding link", autoClose);
     }
   };
 
   const updateFb = async (id) => {
     try {
       await setDoc(doc(fbCollection, id), { link: fb });
-      toast.success("Link Successfully Added..");
+      toast.success("Link Successfully Added..", autoClose);
       setFb("");
       getFbLink();
     } catch (err) {
       console.log(err);
-      toast.error("Error adding link");
+      toast.error("Error adding link", autoClose);
     }
   };
 
   const updateFbHalf = async (id) => {
     try {
       await setDoc(doc(fbHalfCollection, id), { link: fbHalf });
-      toast.success("Link Successfully Added..");
+      toast.success("Link Successfully Added..", autoClose);
       setFbHalf("");
       getFbHalfLink();
     } catch (err) {
       console.log(err);
-      toast.error("Error adding link");
+      toast.error("Error adding link", autoClose);
     }
   };
 
   const updateTk = async (id) => {
     try {
       await setDoc(doc(tkCollection, id), { link: tk });
-      toast.success("Link Successfully Added..");
+      toast.success("Link Successfully Added..", autoClose);
       setTkLink("");
       getTkLink();
     } catch (err) {
       console.log(err);
-      toast.error("Error adding link");
+      toast.error("Error adding link", autoClose);
     }
   };
 
   const updateTkHalf = async (id) => {
     try {
       await setDoc(doc(tkHalfCollection, id), { link: tkHalf });
-      toast.success("Link Successfully Added..");
+      toast.success("Link Successfully Added..", autoClose);
       setTkHalf("");
       getTkHalfLink();
     } catch (err) {
       console.log(err);
-      toast.error("Error adding link");
+      toast.error("Error adding link", autoClose);
     }
   };
 
@@ -219,10 +221,10 @@ export default function AdminLive() {
     const linkDoc = doc(db, "facebookLive", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getFbLink();
     } catch (err) {
-      toast.error("Error deleting link");
+      toast.error("Error deleting link", autoClose);
       console.log(err);
     }
   };
@@ -231,10 +233,10 @@ export default function AdminLive() {
     const linkDoc = doc(db, "facebookHalfHour", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getFbHalfLink();
     } catch (err) {
-      toast.error("Error deleting link");
+      toast.error("Error deleting link", autoClose);
       console.log(err);
     }
   };
@@ -243,10 +245,10 @@ export default function AdminLive() {
     const linkDoc = doc(db, "youtubeLive", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getYtLink();
     } catch (err) {
-      toast.error("Error deleting link");
+      toast.error("Error deleting link", autoClose);
       console.log(err);
     }
   };
@@ -255,10 +257,10 @@ export default function AdminLive() {
     const linkDoc = doc(db, "youtubeHalfHour", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getYtLink();
     } catch (err) {
-      toast.error("Error deleting link");
+      toast.error("Error deleting link", autoClose);
       console.log(err);
     }
   };
@@ -267,10 +269,10 @@ export default function AdminLive() {
     const linkDoc = doc(db, "tiktokLive", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getTkLink();
     } catch (err) {
-      toast.error("Error deleting link");
+      toast.error("Error deleting link", autoClose);
       console.log(err);
     }
   };
@@ -279,10 +281,10 @@ export default function AdminLive() {
     const linkDoc = doc(db, "tiktokHalfHour", id);
     try {
       await deleteDoc(linkDoc);
-      toast.success("Successfully Deleted");
+      toast.success("Successfully Deleted", autoClose);
       getTkHalfLink();
     } catch (err) {
-      toast.error("Error deleting link");
+      toast.error("Error deleting link", autoClose);
       console.log(err);
     }
   };
