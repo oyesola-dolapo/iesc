@@ -20,6 +20,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddLink from "./components/Admin/AdminHome/AddLink/AddLink.jsx";
 import Registration from "./components/Admin/AdminHome/Registration/Registration.jsx";
+import Register from "./components/Register/Register.jsx";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -70,6 +71,7 @@ function App() {
           <Route path="/iescAdmin/Links" element={<AddLink />} />
           <Route path="/iescAdmin/Registration" element={<Registration />} />
           <Route path="/Adult" element={<AdultEducation />} />
+          <Route path="/Register" element={<Register />} />
         </Routes>
         <Whatsapp />
         {visible && (

@@ -35,6 +35,8 @@ export default function Registration() {
               <th>department</th>
               <th>firstname</th>
               <th>lastname</th>
+              <th>Phone No.</th>
+              <th>email</th>
               <th>dob</th>
               <th>address</th>
               <th>city</th>
@@ -50,6 +52,8 @@ export default function Registration() {
                 <td>{item.department}</td>
                 <td>{item.fname}</td>
                 <td>{item.sname}</td>
+                <td>{item.phone}</td>
+                <td>{item.email}</td>
                 <td>{item.dob}</td>
                 <td className="min-w-[10rem]">{item.address}</td>
                 <td>{item.city}</td>

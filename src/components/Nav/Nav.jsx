@@ -125,8 +125,8 @@ export default function Nav() {
         },
         {
           title: "register",
-          style: "text-center underline"
-          // link: "",
+          style: "text-center underline",
+          link: "Register",
         },
       ],
     },
