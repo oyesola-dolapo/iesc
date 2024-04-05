@@ -151,7 +151,7 @@ export default function Register() {
     {
       value: "sign language",
     },
-  ];
+    ];
 
   return (
     <div className="min-h-[100vh] pt-[5rem]">
@@ -171,8 +171,8 @@ export default function Register() {
               name="department"
               className="uppercase p-[.3rem] border-2 border-webColor rounded text-[.8rem]"
               onChange={handleDepartment}
-              value={department}>
-              <option value="" disabled selected>
+              value={department} required>
+              <option value="" disabled unselected>
                 Select
               </option>
               {options.map((option) => (
