@@ -38,12 +38,12 @@ export default function QuickLink() {
       },
     },
     {
-      title: "Live Porgram",
+      title: "church history",
       subtitle:
-        "Join us live for an immersive church experience - click here to participate!",
+        "Learn about our church by exploring our history now!",
       btn: {
-        title: "click here",
-        link: "/Live",
+        title: "Read",
+        link: "/ChurchHistory",
       },
     },
     {
