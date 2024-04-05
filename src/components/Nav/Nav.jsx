@@ -76,12 +76,19 @@ export default function Nav() {
     },
     {
       title: "MEDIA CONNECT",
-      link: "/Media",
+      icon: <i className="fa-solid fa-sort-down"></i>,
+      sublinks: [
+        {
+          title: "gallery",
+          link: "/Media",
+        },
+        {
+          title: "Live",
+          link: "/Live",
+        },
+      ],
     },
-    {
-      title: "Live",
-      link: "/Live",
-    },
+
     {
       title: "RESOURCES",
       icon: <i className="fa-solid fa-sort-down"></i>,
