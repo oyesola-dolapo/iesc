@@ -125,7 +125,7 @@ export default function Nav() {
         },
         {
           title: "register",
-          style: "text-center underline",
+          style: { textDecoration: "underline", textAlign: "center" },
           link: "Register",
         },
       ],
@@ -160,7 +160,11 @@ export default function Nav() {
 
   return (
     <nav className="backdrop-filter backdrop-blur-sm shadow-lg absolute top-0 left-0  w-screen z-[99] h-max px-[1rem] py-[.8rem] z-1 lg:py-0  lg:px-[4rem] flex items-center justify-between">
-      <img src="../images/multiLogo.webp" alt="" className="w-[7rem] lg:w-[12rem]" />
+      <img
+        src="../images/multiLogo.webp"
+        alt=""
+        className="w-[7rem] lg:w-[12rem]"
+      />
       <ul
         className={`desktopNav hidden nav-link lg:flex items-center gap-6 font-medium text-[.9rem] text-webColor`}>
         {navLinks.map((link) => {
@@ -185,7 +189,9 @@ export default function Nav() {
                   {link.sublinks.map((sublink) => (
                     <li key={sublink.title}>
                       <Link to={sublink.link} className={` rounded-lg `}>
-                        <p className={`hover:bg-webColor text-textGold hover:text-black duration-[300ms] px-4 py-3 uppercase ${sublink.style}`}>
+                        <p
+                          className={`hover:bg-webColor text-textGold hover:text-black duration-[300ms] px-4 py-3 uppercase`}
+                          style={sublink.style}>
                           {sublink.title}
                         </p>
                       </Link>
@@ -222,7 +228,9 @@ export default function Nav() {
                           setMenu(false);
                         }}>
                         <Link to={sublink.link}>
-                          <p className="py-3 uppercase">{sublink.title}</p>
+                          <p className="py-3 uppercase" style={sublink.style}>
+                            {sublink.title}
+                          </p>
                         </Link>
                       </li>
                     ))}
