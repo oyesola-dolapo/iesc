@@ -48,7 +48,7 @@ export default function Registration() {
             {data.map((item) => (
               <tr
                 key={item.id}
-                className="text-[1.1rem] uppercase text-center font-medium">
+                className="text-[1rem] uppercase text-center font-medium">
                 <td>{item.department}</td>
                 <td>{item.fname}</td>
                 <td>{item.sname}</td>
