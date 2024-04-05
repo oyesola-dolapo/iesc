@@ -57,7 +57,7 @@ export default function Landing() {
         else if (prevActivePage === 2) return 3;
         else return 1;
       });
-    }, 8500);
+    }, 8000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -81,7 +81,7 @@ export default function Landing() {
               variants={myVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.7, delay: 2.7 }}
+              transition={{ duration: 0.7, delay: 1.5 }}
               className="text-white uppercase text-[1.8rem] sm:text-[2.2rem] lg:text-[4rem] font-bold">
               welcome to inri evangelical spiritual{" "}
               <span className="text-webColor">church</span>
@@ -90,7 +90,7 @@ export default function Landing() {
               variants={myVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.7, delay: 5 }}
+              transition={{ duration: 0.7, delay: 3.5 }}
               className="font-medium mt-4 sm:text-[1rem] lg:text-[1.5rem] lg:px-[10rem]">
               <p>{cover.writeup}</p>
               <p>{cover.verse}</p>
@@ -99,7 +99,7 @@ export default function Landing() {
               variants={myVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.7, delay: 3.8 }}
+              transition={{ duration: 0.7, delay: 2.5 }}
               className="mt-8">
               <Link
                 to="/Media"
