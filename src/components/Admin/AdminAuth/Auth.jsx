@@ -8,8 +8,7 @@ import {
 } from "firebase/auth";
 import Login from "../Login/Login";
 import AdminHome from "../AdminHome/AdminHome";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
 
@@ -64,8 +63,10 @@ export default function Auth() {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setLoggedIn(true);
+        console.log("loggedIn")
       } else {
         setLoggedIn(false);
+        console.log("logged out")
       }
     });
 

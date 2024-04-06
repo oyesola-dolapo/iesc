@@ -6,7 +6,7 @@ function Login() {
     useContext(AuthContext);
 
   return (
-    <div className="pt-[6rem] w-[100vw] flex flex-col-reverse lg:flex-row">
+    <div className="pt-[4rem] w-[100vw] flex flex-col-reverse lg:flex-row">
       <div className="w-full lg:w-1/2 flex flex-col items-center my-auto px-[1rem]">
         <h1 className="mt-[1rem] lg:my-[0] hidden lg:flex uppercase font-medium text-[1.5rem]">
           Welcome back, <span className="text-webColor">Admin</span>
@@ -16,9 +16,7 @@ function Login() {
         </h1>
         <form
           action=""
-          onSubmit={() => {
-            handleSignIn();
-          }}
+          onSubmit={handleSignIn}
           className="my-[1rem] lg:my-[2rem] w-full lg:w-max">
           <div className="flex flex-col">
             <label htmlFor="email" className="font-medium">
@@ -47,11 +45,11 @@ function Login() {
               placeholder="Enter Password"
               className="lg:w-[30rem] h-[3rem] border-2 border-solid border-webColor rounded-lg px-4"
             />
-            {/* {loginErr && (
-              <p className="text-[#d32f2f] tracking-wider text-[12px] mt-[.4rem] mb-[1rem] shake">
+            {loginErr && (
+              <p className="text-[#d32f2f] tracking-wider text-[12px] mt-[.2rem] mb-[1rem] shake">
                 Invalid email or password
               </p>
-            )} */}
+            )}
           </div>
           <button
             type="submit"
@@ -64,7 +62,7 @@ function Login() {
         <img
           src="/images/personal/IMG_5149.webp"
           alt=""
-          className="opacity-[.6] sm:h-[30vh] lg:h-full sm:w-full object-cover"
+          className="opacity-[.6]"
         />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-wider text-white lg:hidden uppercase w-max font-medium text-[1.5rem]">
           Welcome back, <span className="text-webColor">Admin</span>
