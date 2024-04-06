@@ -63,10 +63,8 @@ export default function Auth() {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setLoggedIn(true);
-        console.log("loggedIn")
       } else {
         setLoggedIn(false);
-        console.log("logged out")
       }
     });
 
