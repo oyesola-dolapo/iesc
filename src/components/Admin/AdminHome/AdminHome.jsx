@@ -41,7 +41,7 @@ export default function AdminHome() {
       <div className="flex flex-wrap justify-center gap-[1rem] lg:gap-[2rem] mt-[1rem]">
         {sections.map((section) => {
           return (
-            <div className="bg-white shadow-lg rounded lg:w-[20rem] flex flex-col pb-[2rem] pt-[1rem]">
+            <div className="bg-white shadow-lg rounded lg:w-[20rem] flex flex-col pb-[2rem] pt-[1rem] px-[1rem]">
               <h1 className="text-center font-bold text-[1.2rem]">{section.title}</h1>
               <p className="text-center">{section.subtitle}</p>
               <button className="mt-[3rem]">
