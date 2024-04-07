@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AdminAuth/Auth";
+import { Link, Outlet } from "react-router-dom";
 
 export default function AdminHome() {
   const { handleSignOut, loggedIn } = useContext(AuthContext);
@@ -11,7 +12,7 @@ export default function AdminHome() {
         "This section allows you to seamlessly add and manage video and live links.",
       btn: {
         title: "Add Link",
-        link: "iescAdmin/Links",
+        link: "/iescAdmin/Links",
       },
     },
     {
@@ -20,7 +21,7 @@ export default function AdminHome() {
         "This section allows you to seamlessly add and manage video and live links.",
       btn: {
         title: "View Registration",
-        link: "iescAdmin/Registration",
+        link: "/iescAdmin/Registration",
       },
     },
   ];
@@ -42,15 +43,24 @@ export default function AdminHome() {
         {sections.map((section) => {
           return (
             <div className="bg-white shadow-lg rounded lg:w-[20rem] flex flex-col pb-[2rem] pt-[1rem] px-[1rem]">
-              <h1 className="text-center font-bold text-[1.2rem]">{section.title}</h1>
+              <h1 className="text-center font-bold text-[1.2rem]">
+                {section.title}
+              </h1>
               <p className="text-center">{section.subtitle}</p>
               <button className="mt-[3rem]">
-                <a href={section.btn.link} className="bg-webColor rounded shadow font-bold px-[1.2rem] py-[.6rem]"> {section.btn.title} </a>
+                <Link
+                  to={section.btn.link}
+                  className="bg-webColor rounded shadow font-bold px-[1.2rem] py-[.6rem]">
+                  {" "}
+                  {section.btn.title}{" "}
+                </Link>
               </button>
             </div>
           );
         })}
       </div>
+
+      <Outlet />
     </div>
   );
 }

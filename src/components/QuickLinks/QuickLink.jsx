@@ -61,7 +61,7 @@ export default function QuickLink() {
       {links.map((link) => {
         return (
           <div className="relative shadow sm:w-[17rem] h-[19rem] px-[2.5rem] lg:px-[1rem] flex flex-col items-center pt-[2rem] rounded bg-gray-100">
-            <h1 className="font-bold text-[1.8rem] mb-[.6rem] uppercase text-center">
+            <h1 className="font-bold text-[1.8rem] mb-[.6rem] uppercase text-center leading-9">
               {link.title}
             </h1>
             <p className="text-center">{link.subtitle}</p>

@@ -20,7 +20,7 @@ export default function Nav() {
   const navLinks = [
     {
       title: "HOME",
-      link: "/*",
+      link: "/",
     },
     {
       title: "office of the primate",
