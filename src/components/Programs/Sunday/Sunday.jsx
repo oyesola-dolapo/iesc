@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 export default function Sunday() {
-  const [location, setLocation] = useState();
+  const [location, setLocation] = useState(
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng"
+  );
   const services = [
     {
       title: "cathedral",
@@ -61,7 +63,7 @@ export default function Sunday() {
 
   return (
     <div className="pt-[4.5rem] flex">
-      <div className="static w-screen sm:flex h-max ">
+      <div className="static w-screen sm:flex">
         <div className="service-scroll h-[80vh] sm:h-[60vh] lg:h-[80vh] sm:w-[40%] lg:w-[30%] overflow-hidden overflow-y-scroll">
           {services.map((service) => {
             return (
