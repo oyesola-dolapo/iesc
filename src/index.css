@@ -42,7 +42,11 @@ tr {
 }
 
 input[type="date"] {
-  -webkit-appearance: textfield; 
+  -webkit-appearance: textfield;
+}
+
+.service-scroll {
+  scrollbar-width: thin;  
 }
 
 .navLinkHover {
