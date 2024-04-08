@@ -14,7 +14,7 @@ export default function ComingSoon() {
     },
   };
   return (
-    <div className="h-[90vh] flex justify-center items-center flex-col text-grayBg">
+    <div className="h-[80vh] lg:h-[90vh] flex justify-center items-center flex-col text-grayBg">
       <motion.h1
         variants={myVariants}
         initial="hidden"
