@@ -28,7 +28,7 @@ export default function Nav() {
       sublinks: [
         {
           title: "Meet the primate",
-          link: "/MeetPrimate",
+          link: "meet primate",
         },
         { title: "awards and recognition" },
         { title: "warnings to the nation" },
@@ -43,11 +43,11 @@ export default function Nav() {
       sublinks: [
         {
           title: "Church History",
-          link: "/ChurchHistory",
+          link: "church history",
         },
         {
           title: "Vision & Mission",
-          link: "/Vision",
+          link: "vision",
         },
         {
           title: "Our Belief",
@@ -55,7 +55,7 @@ export default function Nav() {
         },
         {
           title: "Parishes",
-          link: "/Parishes",
+          link: "parishes",
         },
       ],
     },
@@ -80,11 +80,11 @@ export default function Nav() {
       sublinks: [
         {
           title: "gallery",
-          link: "/Media",
+          link: "media",
         },
         {
           title: "Live",
-          link: "/Live",
+          link: "live",
         },
       ],
     },
@@ -96,11 +96,11 @@ export default function Nav() {
       sublinks: [
         {
           title: "Adult education",
-          link: "/Adult",
+          link: "adult education",
         },
         {
           title: "Sign Language",
-          link: "/Vision",
+          link: "sign language",
         },
         {
           title: "music academy",
@@ -108,11 +108,11 @@ export default function Nav() {
         },
         {
           title: "content creation and management",
-          // link: "",
+          link: "content creation and management",
         },
         {
           title: "community projects",
-          // link: "",
+          link: "community projects",
         },
         {
           title: "empowerment programmes",
@@ -133,7 +133,7 @@ export default function Nav() {
         {
           title: "register",
           style: { textDecoration: "underline", textAlign: "center" },
-          link: "Register",
+          link: "register",
         },
       ],
     },
