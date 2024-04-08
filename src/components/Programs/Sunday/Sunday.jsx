@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Sunday() {
-  const [location, setLocation] = useState(undefined);
+  const [location, setLocation] = useState();
   const services = [
     {
       title: "cathedral",
@@ -93,17 +93,19 @@ export default function Sunday() {
           })}
         </div>
 
-        <div className="sm:w-[60%] lg:w-[70%] sm:h-full px-[.5rem]">
-          <iframe
-            src={location}
-            width="600"
-            height="450"
-            style={{ border: "0" }}
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            className="w-full h-[25rem] sm:h-full"></iframe>
-        </div>
+        {location && (
+          <div className="sm:w-[60%] lg:w-[70%] sm:h-full px-[.5rem]">
+            <iframe
+              src={location}
+              width="600"
+              height="450"
+              style={{ border: "0" }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              className="w-full h-[25rem] sm:h-full"></iframe>
+          </div>
+        )}
       </div>
     </div>
   );
