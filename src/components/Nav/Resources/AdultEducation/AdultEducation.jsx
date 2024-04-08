@@ -3,7 +3,7 @@ import React from "react";
 export default function AdultEducation() {
   return (
     <div className="min-h-[100vh] pt-[4.5rem] px-[1rem] lg:px-[8rem]">
-      <h1 className="text-center font-bold mb-[1rem] lg:text-[2rem]">
+      <h1 className="text-center font-bold mb-[1rem] text-[1.3rem] lg:text-[2rem]">
         ADULT <span className="text-textGold">EDUCATION</span>
       </h1>
       <div className="tracking-wide lg:text-[1.2rem]">
