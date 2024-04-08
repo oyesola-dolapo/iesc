@@ -22,6 +22,7 @@ export default function Sunday() {
           time: "Last Service: 11:30am - 3:30pm",
         },
       ],
+      scroll: 500,
       location:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
     },
@@ -34,6 +35,7 @@ export default function Sunday() {
           time: "First Service: 10:00am - 12:00pm",
         },
       ],
+      scroll: 450,
       location:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
     },
@@ -45,6 +47,7 @@ export default function Sunday() {
           time: "First Service: 10:00am - 12:00pm",
         },
       ],
+      scroll: 400,
       location:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
     },
@@ -56,6 +59,7 @@ export default function Sunday() {
           time: "First Service: 10:00am - 12:00pm",
         },
       ],
+      scroll: 300,
       location:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
     },
@@ -85,6 +89,9 @@ export default function Sunday() {
                 </ul>
                 <button
                   onClick={() => {
+                    if (window.innerWidth <= 768) {
+                      window.scrollTo(0, service.scroll);
+                    }
                     setLocation(service.location);
                   }}
                   className="bg-webColor text-gray-900 font-bold tracking-wider mt-[.6rem] px-[1.6rem] py-[.3rem] rounded">
