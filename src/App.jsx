@@ -13,7 +13,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddLink from "./components/Admin/AdminHome/AddLink/AddLink.jsx";
 import AdultEducation from "./components/Nav/Resources/AdultEducation/AdultEducation.jsx";
-import Registration from "./components/Admin/AdminHome/Registration/Registration.jsx";
 import NotFound from "./components/extras/NotFound/NotFound.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import Live from "./components/MediaResources/Live/Live.jsx";
@@ -21,6 +20,7 @@ import Register from "./components/Nav/Resources/Register/Register.jsx";
 import SignLanguage from "./components/Nav/Resources/SignLanguage/SignLanguage.jsx";
 import Content from "./components/Nav/Resources/ContentCreation/Content.jsx";
 import Community from "./components/Nav/Resources/Community/Community.jsx";
+import Registration from "./components/Admin/AdminHome/Registration/Registration.jsx";
 
 function App() {
   return (
@@ -37,9 +37,9 @@ function App() {
             <Route path="meet primate" element={<MeetPrimate />} />
             <Route path="media" element={<Media />} />
             <Route path="live" element={<Live />} />
-            <Route path="iescAdmin" element={<Auth />} />
-            <Route path="/iescAdmin/Links" element={<AddLink />} />
-            <Route path="/iescAdmin/Registration" element={<Register />} />
+            <Route path="iescadmin" element={<Auth />} />
+            <Route path="/iescadmin/links" element={<AddLink />} />
+            <Route path="/iescadmin/registration" element={<Registration />} />
             <Route path="adult education" element={<AdultEducation />} />
             <Route
               path="content creation and management"
