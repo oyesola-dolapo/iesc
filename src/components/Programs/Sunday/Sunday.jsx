@@ -25,6 +25,10 @@ export default function Sunday() {
       scroll: 500,
       location:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
+      address:
+        "No 1 Primate Ayodele Crescent, INRI Bus Stop, along Isolo, Egbe Rd, Mushin, Lagos",
+      call: "+234 (803) 301-7747",
+      callLink: "tel:+8033017747",
     },
 
     {
@@ -49,10 +53,10 @@ export default function Sunday() {
       ],
       scroll: 400,
       location:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5483805031167!2d3.269418674753749!3d6.578534993414948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b90109d234f5d%3A0x1d4be223ab80e22d!2sPrimate%20Elijah%20Ayodele%20Ave%2C%20Idimu%2C%20Idimu%2FIsheri%20Olofin%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1712649318891!5m2!1sen!2sng",
     },
     {
-      title: "Sope parish",
+      title: "Achievers Ark parish",
       subhead: "service time",
       times: [
         {
@@ -60,8 +64,26 @@ export default function Sunday() {
         },
       ],
       scroll: 300,
-      location:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
+      location: "",
+      address:
+        "Opposite AP filling station, Tipper garage Area, POTA road, Mowo, Badagry",
+      call: "+234 (806) 234-3323",
+      callLink: "tel:+2348062363323",
+    },
+
+    {
+      title: "Talitakumi model parish",
+      subhead: "service time",
+      times: [
+        {
+          time: "First Service: 10:00am - 12:00pm",
+        },
+      ],
+      scroll: 300,
+      location: "",
+      address: "2, Ayinke Sholola Baale B/Stop, lutabo ijoko, ogun state",
+      call: "+234 (803) 445-1892",
+      callLink: "tel:+2348034451892",
     },
   ];
 
@@ -75,13 +97,20 @@ export default function Sunday() {
                 <h1 className="uppercase tracking-wider text-textGold font-bold text-[1.5rem]">
                   {service.title}
                 </h1>{" "}
-                <p className="uppercase font-medium text-[1.5rem]">
+                <div className="mb-[.5rem]">
+                  <i class="fa-solid fa-location-dot"></i> {service.address}
+                </div>
+                <div className="mb-[.5rem] flex gap-2 items-center">
+                  <i class="fa-solid fa-phone"></i>{" "}
+                  <a href={service.callLink} className="text-textGold underline">{service.call}</a>
+                </div>
+                <p className="uppercase font-medium text-[1.2rem]">
                   {service.subhead}
                 </p>
                 <ul>
                   {service.times.map((time) => {
                     return (
-                      <li className="lg:text-[1.2rem] tracking-wider">
+                      <li className="lg:text-[1rem] tracking-wider">
                         {time.time}
                       </li>
                     );
