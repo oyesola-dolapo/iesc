@@ -47,7 +47,7 @@ export default function Appointments() {
       <div className="overflow-scroll lg:overflow-hidden px-[1rem]">
         <table className="lg:mx-auto">
           <thead>
-            <tr className="uppercase bg-gray-400">
+            <tr className="text-[.95rem] uppercase bg-gray-400">
               <th>department</th>
               <th>full nmae</th>
               <th>Phone No.</th>
@@ -60,12 +60,12 @@ export default function Appointments() {
             {data.map((item) => (
               <tr
                 key={item.id}
-                className="text-[1rem] uppercase text-center font-medium">
-                <td>{item.department}</td>
+                className="text-[.85rem] uppercase text-center font-medium">
+                <td className="py-2">{item.department}</td>
                 <td>{item.name}</td>
                 <td>{item.phone}</td>
                 <td>{item.email}</td>
-                <td>{item.date}</td>
+                <td className="min-w-[7rem]">{item.date}</td>
                 <td className="min-w-[10rem]">{item.address}</td>
                 <td
                   onClick={() => {
