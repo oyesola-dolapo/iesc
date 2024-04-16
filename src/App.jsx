@@ -21,6 +21,8 @@ import SignLanguage from "./components/Nav/Resources/SignLanguage/SignLanguage.j
 import Content from "./components/Nav/Resources/ContentCreation/Content.jsx";
 import Community from "./components/Nav/Resources/Community/Community.jsx";
 import Registration from "./components/Admin/AdminHome/Registration/Registration.jsx";
+import Appointment from "./components/Nav/PrimateOffice/Appointment/Appointment.jsx";
+import Appointments from "./components/Admin/AdminHome/ViewAppoints/Appointments.jsx";
 
 function App() {
   return (
@@ -35,11 +37,13 @@ function App() {
             <Route path="church history" element={<History />} />
             <Route path="parishes" element={<Sunday />} />
             <Route path="meet primate" element={<MeetPrimate />} />
+            <Route path="appointment" element={<Appointment />} />
             <Route path="media" element={<Media />} />
             <Route path="live" element={<Live />} />
             <Route path="iescadmin" element={<Auth />} />
             <Route path="/iescadmin/links" element={<AddLink />} />
             <Route path="/iescadmin/registration" element={<Registration />} />
+            <Route path="/iescadmin/appointments" element={<Appointments />} />
             <Route path="adult education" element={<AdultEducation />} />
             <Route
               path="content creation and management"

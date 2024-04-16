@@ -18,7 +18,7 @@ export default function Landing() {
   const covers = [
     {
       key: 1,
-      image: "/images/personal/IMG_5149.webp",
+      image: "/images/bg/IMG_6258.webp",
       writeup: `God is spirit, and those who worship him must worship in spirit and
     truth." 24 For God is Spirit, so those who worship him must worship
     in spirit and in truth.” 24 God is sheer being itself - Spirit.
@@ -29,7 +29,7 @@ export default function Landing() {
     },
     {
       key: 2,
-      image: "/images/member/IMG_1196.webp",
+      image: "/images/bg/IMG_5726.webp",
       writeup: `Bring the whole tithe into the storehouse, that there may be food
       in my house. Test me in this,” says the Lord Almighty, “and see if I
       will not throw open the floodgates of heaven and pour out so much

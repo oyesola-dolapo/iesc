@@ -12,16 +12,25 @@ export default function AdminHome() {
         "This section allows you to seamlessly add and manage video and live links.",
       btn: {
         title: "Add Link",
-        link: "/iescAdmin/Links",
+        link: "/iescAdmin/links",
       },
     },
     {
       title: "Registration",
       subtitle:
-        "This section allows you to seamlessly add and manage video and live links.",
+        "This section allows you to view the list of those who registered for a department.",
       btn: {
         title: "View Registration",
-        link: "/iescAdmin/Registration",
+        link: "/iescAdmin/registration",
+      },
+    },
+    {
+      title: "Appointments",
+      subtitle:
+        "This section allows you to view the list of booked appointments",
+      btn: {
+        title: "View Registration",
+        link: "/iescAdmin/appointments",
       },
     },
   ];

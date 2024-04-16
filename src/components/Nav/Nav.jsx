@@ -32,9 +32,11 @@ export default function Nav() {
         },
         { title: "awards and recognition" },
         { title: "warnings to the nation" },
-        { title: "Prophecies and fulfilments" },
-        { title: "inri widows foundation" },
-        { title: "appointments" },
+        { title: "Prophecies and fulfillments" },
+        {
+          title: "appointments",
+          link: "appointment",
+        },
       ],
     },
     {

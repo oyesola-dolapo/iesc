@@ -8,7 +8,7 @@ export default function QuickLink() {
         "Join us live for an immersive church experience - click here to participate!",
       btn: {
         title: "Live",
-        link: "/Live",
+        link: "/live",
       },
     },
     {
@@ -17,7 +17,7 @@ export default function QuickLink() {
         "Join us live for an immersive church experience - click here to participate!",
       btn: {
         title: "Join",
-        link: "/Register",
+        link: "/register",
       },
     },
     {
@@ -25,7 +25,7 @@ export default function QuickLink() {
       subtitle: "Explore Our Parish Locations Near You!",
       btn: {
         title: "Location",
-        link: "/Parishes",
+        link: "/parishes",
       },
     },
     {
@@ -43,7 +43,7 @@ export default function QuickLink() {
         "Learn about our church by exploring our history now!",
       btn: {
         title: "Read",
-        link: "/ChurchHistory",
+        link: "/church history",
       },
     },
     {

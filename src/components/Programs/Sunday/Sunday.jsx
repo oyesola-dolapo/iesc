@@ -40,16 +40,21 @@ export default function Sunday() {
         },
       ],
       scroll: 450,
+      address: "Primate Ayodele close, MTN B/Stop Badagry",
       location:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.954501452327!2d3.3114911747533022!3d6.527430893465217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5f29ff59bf%3A0xe1922c4a94d72886!2s2%20Primate%20Ayodele%20Cres%2C%20Isaga%20Tedo%2C%20Close%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1709333354852!5m2!1sen!2sng",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650.7458452104702!2d2.969540310997787!3d6.463071304089498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b86a5a27ba81f%3A0x5192bfbea50bacc9!2sLagos%20-%20Badagry%20Expy%2C%20Mowo!5e1!3m2!1sen!2sng!4v1713282989447!5m2!1sen!2sng",
     },
     {
       title: "Sope parish",
       subhead: "service time",
       times: [
         {
-          time: "First Service: 10:00am - 12:00pm",
+          time: "English Service: 8:00am - 10:00am",
         },
+        {
+          time: "Yoruba Service: 10:00am - 1:00am",
+        },
+        
       ],
       scroll: 400,
       location:
@@ -97,13 +102,21 @@ export default function Sunday() {
                 <h1 className="uppercase tracking-wider text-textGold font-bold text-[1.5rem]">
                   {service.title}
                 </h1>{" "}
-                <div className="mb-[.5rem]">
-                  <i class="fa-solid fa-location-dot"></i> {service.address}
-                </div>
-                <div className="mb-[.5rem] flex gap-2 items-center">
-                  <i class="fa-solid fa-phone"></i>{" "}
-                  <a href={service.callLink} className="text-textGold underline">{service.call}</a>
-                </div>
+                {service.address && (
+                  <div className="mb-[.5rem]">
+                    <i class="fa-solid fa-location-dot"></i> {service.address}
+                  </div>
+                )}
+                {service.call && (
+                  <div className="mb-[.5rem] flex gap-2 items-center">
+                    <i class="fa-solid fa-phone"></i>{" "}
+                    <a
+                      href={service.callLink}
+                      className="text-textGold underline">
+                      {service.call}
+                    </a>
+                  </div>
+                )}
                 <p className="uppercase font-medium text-[1.2rem]">
                   {service.subhead}
                 </p>
