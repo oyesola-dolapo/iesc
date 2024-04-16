@@ -192,7 +192,7 @@ export default function Register() {
               ))}
             </select>
           </div>
-          <div className="lg:flex lg:flex-wrap gap-[1rem] lg:w-[70%] lg:mx-auto mt-[1rem]">
+          <div className="lg:flex lg:flex-wrap gap-[1rem] lg:w-[75%] lg:mx-auto mt-[1rem]">
             {forms.map((form) => {
               return (
                 <div className="flex flex-col mb-[.6rem] lg:w-max">
