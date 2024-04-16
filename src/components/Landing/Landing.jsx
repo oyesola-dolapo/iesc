@@ -26,6 +26,7 @@ export default function Landing() {
     spirits, their true selves, in adoration.`,
       verse: "- 1 John 4:24",
       btn: "media resources",
+      link: "/media"
     },
     {
       key: 2,
@@ -36,6 +37,7 @@ export default function Landing() {
       blessing that there will not be room enough to store it.`,
       verse: "- Malachi 3:10",
       btn: "online giving",
+      link: "/give"
     },
     {
       key: 3,
@@ -47,6 +49,7 @@ export default function Landing() {
       so that the church may be built up.`,
       verse: "- 1 Corinthians 14:26",
       btn: "worship with us",
+      link: "/parishes"
     },
   ];
 
@@ -102,7 +105,7 @@ export default function Landing() {
               transition={{ duration: 0.7, delay: 1.6 }}
               className="mt-8">
               <Link
-                to="/Media"
+                to={cover.link}
                 className="worship-btn bg-textGold xl:bg-transparent isolate relative uppercase px-8 py-3  backdrop-filter backdrop-blur-sm ">
                 {cover.btn}
               </Link>
