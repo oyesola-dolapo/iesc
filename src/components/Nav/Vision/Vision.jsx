@@ -4,21 +4,19 @@ export default function Vision() {
   const style = "text-webColor font-medium";
   return (
     <div>
-      <div className="relative bg-black lg:hidden w-[100vw]" >
+      <div className="relative bg-black w-[100vw] mb-[1rem]">
         <img
-          src="/images/personal/IMG_1705.webp"
+          src="/images/personal/IMG_5149.webp"
           alt=""
-          className="h-[35vh] w-[100vw] object-cover opacity-[.5]  mb-[1rem]"
+          className="h-[35vh] xl:h-[40vh] w-[100vw] object-cover opacity-[.5]  mb-[1rem]"
         />
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-wider w-max mt-[1rem] text-white font-bold text-[1.5rem] w-full p-0">
+        <h1 className="uppercase absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-wider w-max mt-[1rem] text-white font-bold text-[1.5rem] xl:text-[2.5rem] p-0">
           THE VISION AND MISSION
         </h1>
       </div>
-      <div className="xl:pt-[4.5rem] px-[1.5rem] xl:w-[60%]">
-        <h1 className="hidden xl:flex tracking-wider font-bold text-[1.5rem] mb-[.5rem] xl:text-[2rem]">
-          THE VISION AND MISSION
-        </h1>
-        <p className=" lg:text-[1.2rem]">
+      <div className="mt-[1rem] px-[1rem] lg:px-[8rem]">
+        
+        <p className="lg:text-[1.2rem]">
           <span className={style}>INRI EVANGELICAL SPIRITUAL CHURCH</span>{" "}
           <br />
           The primary preoccupation of true adherents of the Christian religion
