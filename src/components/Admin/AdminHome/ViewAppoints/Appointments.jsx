@@ -28,7 +28,7 @@ export default function Appointments() {
   }, []);
 
   const handleDelete = async (id) => {
-    const linkDoc = doc(db, "registration", id);
+    const linkDoc = doc(db, "appointment", id);
     try {
       await deleteDoc(linkDoc);
       toast.success("Successfully Deleted", autoClose);

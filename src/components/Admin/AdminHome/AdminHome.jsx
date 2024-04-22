@@ -29,7 +29,7 @@ export default function AdminHome() {
       subtitle:
         "This section allows you to view the list of booked appointments",
       btn: {
-        title: "View Registration",
+        title: "View Appointments",
         link: "/iescAdmin/appointments",
       },
     },
