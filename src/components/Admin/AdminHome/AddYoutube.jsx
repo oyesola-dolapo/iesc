@@ -8,13 +8,24 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { set } from "firebase/database";
 
 export default function AddYoutube() {
   const [ytVid, setYtVid] = useState([]);
   const [ytLink, setYtLink] = useState("");
   const [ytTitle, setYtTitle] = useState("");
+  const [loader, setLoader] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const autoClose = { autoClose: 800 };
+
+  useEffect(() => {
+    if ((ytLink, ytTitle)) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [ytLink, ytTitle]);
 
   const handleYtLink = (e) => {
     setYtLink(e.target.value);
@@ -45,6 +56,7 @@ export default function AddYoutube() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoader(true);
       await addDoc(linkCollectionRef, { link: ytLink, title: ytTitle });
       toast.success("Successfully Added", autoClose);
       getLink();
@@ -53,6 +65,8 @@ export default function AddYoutube() {
     } catch (err) {
       toast.error("Error", autoClose);
       console.log(err);
+    } finally {
+      setLoader(false);
     }
   };
   const handleDelete = async (id) => {
@@ -101,8 +115,20 @@ export default function AddYoutube() {
         </div>
         <button
           type="submit"
-          className="bg-black text-textGold rounded-lg w-[6rem] h-[2.5rem] mt-[.5rem] font-medium tracking-wide">
-          ADD
+          disabled={isDisabled}
+          className={`bg-black text-textGold rounded-lg w-[6rem] h-[2.5rem] mt-[.5rem] font-medium tracking-wide   ${
+            isDisabled && "opacity-50 cursor-not-allowed"
+          }`}>
+          {loader ? (
+            <lord-icon
+              src="https://cdn.lordicon.com/gkryirhd.json"
+              trigger="loop"
+              state="loop-rotation-three-quarters"
+              colors="primary:#ddb057"
+              style={{ width: "40px", height: "40px" }}></lord-icon>
+          ) : (
+            <p>ADD</p>
+          )}
         </button>
       </form>
 

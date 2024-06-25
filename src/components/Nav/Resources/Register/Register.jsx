@@ -15,6 +15,7 @@ export default function Register() {
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     if (
@@ -84,6 +85,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoader(true);
       await addDoc(linkCollectionRef, {
         fname: fname,
         sname: sname,
@@ -109,6 +111,8 @@ export default function Register() {
     } catch (err) {
       toast.error("Error", autoClose);
       console.log(err);
+    } finally {
+      setLoader(false);
     }
   };
 
@@ -249,7 +253,16 @@ export default function Register() {
             className={`flex cursor-pointer justify-center items-center w-full h-[3rem] lg:w-[20rem] bg-webColor text-black rounded font-bold mt-[.5rem] mx-auto ${
               isDisabled && "opacity-50 cursor-not-allowed"
             }`}>
-            SUBMIT
+            {loader ? (
+              <lord-icon
+                src="https://cdn.lordicon.com/gkryirhd.json"
+                trigger="loop"
+                state="loop-rotation-three-quarters"
+                colors="primary:#000000"
+                style={{ width: "40px", height: "40px" }}></lord-icon>
+            ) : (
+              <p>Submit</p>
+            )}
           </button>
         </form>
       </div>

@@ -105,7 +105,7 @@ export default function Nav() {
         },
         {
           title: "music academy",
-          // link: "",
+          link: "music",
         },
         {
           title: "content creation and management",
@@ -117,19 +117,19 @@ export default function Nav() {
         },
         {
           title: "empowerment programmes",
-          // link: "",
+          link: "empowerment programmes",
         },
         {
           title: "youth development",
-          // link: "",
+          link: "youth development",
         },
         {
           title: "vocational trainings",
-          // link: "",
+          link: "vocational trainings",
         },
         {
           title: "careers",
-          // link: "",
+          link: "careers",
         },
         {
           title: "register",

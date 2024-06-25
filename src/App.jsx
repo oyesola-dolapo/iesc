@@ -23,6 +23,11 @@ import Community from "./components/Nav/Resources/Community/Community.jsx";
 import Registration from "./components/Admin/AdminHome/Registration/Registration.jsx";
 import Appointment from "./components/Nav/PrimateOffice/Appointment/Appointment.jsx";
 import Appointments from "./components/Admin/AdminHome/ViewAppoints/Appointments.jsx";
+import Music from "./components/Nav/Resources/MusicAcademy/Music.jsx";
+import Empowerment from "./components/Nav/Resources/Empowerment/Empowerment.jsx";
+import Careers from "./components/Nav/Resources/Careers/Careers.jsx";
+import Vocational from "./components/Nav/Resources/VocationalTrainings/Vocational.jsx";
+import Youth from "./components/Nav/Resources/YouthDevelopment/Youth.jsx";
 
 function App() {
   return (
@@ -45,13 +50,18 @@ function App() {
             <Route path="/iescadmin/registration" element={<Registration />} />
             <Route path="/iescadmin/appointments" element={<Appointments />} />
             <Route path="adult education" element={<AdultEducation />} />
+            <Route path="music" element={<Music />} />
             <Route
               path="content creation and management"
               element={<Content />}
             />
             <Route path="community projects" element={<Community />} />
+            <Route path="empowerment programmes" element={<Empowerment />} />
             <Route path="sign language" element={<SignLanguage />} />
             <Route path="register" element={<Register />} />
+            <Route path="youth development" element={<Youth />} />
+            <Route path="vocational trainings" element={<Vocational />} />
+            <Route path="careers" element={<Careers />} />
             <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>

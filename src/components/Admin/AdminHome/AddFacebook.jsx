@@ -13,6 +13,16 @@ export default function AddFacebook() {
   const [fbVid, setFbVid] = useState([]);
   const [fbLink, setFbLink] = useState("");
   const [fbTitle, setFbTitle] = useState("");
+  const [loader, setLoader] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    if ((fbLink, fbTitle)) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [fbLink, fbTitle]);
 
   const autoClose = { autoClose: 800 };
 
@@ -45,6 +55,7 @@ export default function AddFacebook() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoader(true);
       await addDoc(linkCollectionRef, { link: fbLink, title: fbTitle });
       toast.success("Successfully Added", autoClose);
       getLink();
@@ -53,6 +64,8 @@ export default function AddFacebook() {
     } catch (err) {
       toast.error("Error", autoClose);
       console.log(err);
+    } finally {
+      setLoader(false);
     }
   };
 
@@ -102,8 +115,20 @@ export default function AddFacebook() {
         </div>
         <button
           type="submit"
-          className="bg-black text-textGold rounded-lg w-[6rem] h-[2.5rem] mt-[.5rem] font-medium tracking-wide">
-          ADD
+          disabled={isDisabled}
+          className={`bg-black text-textGold rounded-lg w-[6rem] h-[2.5rem] mt-[.5rem] font-medium tracking-wide   ${
+            isDisabled && "opacity-50 cursor-not-allowed"
+          }`}>
+          {loader ? (
+            <lord-icon
+              src="https://cdn.lordicon.com/gkryirhd.json"
+              trigger="loop"
+              state="loop-rotation-three-quarters"
+              colors="primary:#ddb057"
+              style={{ width: "40px", height: "40px" }}></lord-icon>
+          ) : (
+            <p>ADD</p>
+          )}
         </button>
       </form>
 
@@ -120,7 +145,7 @@ export default function AddFacebook() {
                 className="w-full h-[15rem]  sm:h-[20rem] lg:h-[14rem]"></iframe>{" "}
               <p className="text-[.9rem] ">{link.title}</p>
               <p
-                className="mt-[.2rem] underline text-red-500 cursor-pointer"
+                className={`mt-[.2rem] underline text-red-500 cursor-pointer`}
                 onClick={() => handleDelete(link.id)}>
                 Delete Video
               </p>

@@ -11,6 +11,7 @@ export default function Appointment() {
   const [address, setAddress] = useState("");
   const [date, setDate] = useState("");
   const [check, setCheck] = useState(undefined);
+  const [loader, setLoader] = useState(false);
 
   const handleDepartment = (e) => {
     setDepartment(e.target.value);
@@ -41,6 +42,7 @@ export default function Appointment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoader(true);
       await addDoc(linkCollectionRef, {
         name: name,
         phone: phone,
@@ -58,6 +60,8 @@ export default function Appointment() {
     } catch (err) {
       toast.error("Error", autoClose);
       console.log(err);
+    } finally {
+      setLoader(false);
     }
   };
 
@@ -185,7 +189,16 @@ export default function Appointment() {
             className={`flex justify-center items-center w-full h-[3rem] lg:w-[20rem] bg-webColor text-black rounded font-bold mt-[.5rem] mx-auto ${
               !check && "opacity-50 cursor-not-allowed"
             }`}>
-            SUBMIT
+            {loader ? (
+              <lord-icon
+                src="https://cdn.lordicon.com/gkryirhd.json"
+                trigger="loop"
+                state="loop-rotation-three-quarters"
+                colors="primary:#000000"
+                style={{ width: "40px", height: "40px" }}></lord-icon>
+            ) : (
+              <p>Submit</p>
+            )}
           </button>
         </form>
       </div>
