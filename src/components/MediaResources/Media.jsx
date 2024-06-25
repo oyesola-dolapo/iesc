@@ -46,8 +46,13 @@ export default function Media() {
           );
         })}
       </ul>
-      <Youtube active={activeSection === 1} />
-      <Facebook active={activeSection === 2} />
+      <div>
+        {activeSection === 1 ? (
+          <Youtube active={activeSection === 1} />
+        ) : (
+          <Facebook active={activeSection === 2} />
+        )}
+      </div>
     </div>
   );
 }

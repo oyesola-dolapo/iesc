@@ -29,12 +29,12 @@ export default function Youtube() {
 
   return (
     <section id="Youtube" className=" px-[1rem] lg:px-[2rem]">
-      <h2
+      {/* <h2
         className={`${
           links.length === 0 && "hidden"
         } text-center mb-[.5rem] text-[1rem] lg:text-[1.2rem] font-bold`}>
         YOUTUBE VIDEOS
-      </h2>
+      </h2> */}
       <div
         className={`${
           links.length > 2 ? "lg:justify-between" : ""

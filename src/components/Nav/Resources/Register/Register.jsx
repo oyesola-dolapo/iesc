@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { db } from "../../../../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
@@ -14,6 +14,37 @@ export default function Register() {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    if (
+      department &&
+      fname &&
+      sname &&
+      phone &&
+      email &&
+      dob &&
+      address &&
+      city &&
+      state &&
+      country
+    ) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [
+    department,
+    fname,
+    sname,
+    phone,
+    email,
+    dob,
+    address,
+    city,
+    state,
+    country,
+  ]);
 
   const handleDepartment = (e) => {
     setDepartment(e.target.value);
@@ -214,7 +245,10 @@ export default function Register() {
           </div>
           <button
             type="submit"
-            className="flex justify-center items-center w-full h-[3rem] lg:w-[20rem] bg-webColor text-black rounded font-bold mt-[.5rem] mx-auto">
+            disabled={isDisabled}
+            className={`flex cursor-pointer justify-center items-center w-full h-[3rem] lg:w-[20rem] bg-webColor text-black rounded font-bold mt-[.5rem] mx-auto ${
+              isDisabled && "opacity-50 cursor-not-allowed"
+            }`}>
             SUBMIT
           </button>
         </form>

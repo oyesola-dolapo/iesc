@@ -28,12 +28,12 @@ export default function Facebook() {
     <section
       id="Facebook"
       className="mt-[1rem] lg:mt-[1.5rem] px-[1rem] lg:px-[2rem]">
-      <h2
+      {/* <h2
         className={`${
           links.length === 0 && "hidden"
         } text-center mb-[.5rem] text-[1rem] lg:text-[1.2rem] font-bold`}>
         FACEBOOK VIDEOS
-      </h2>
+      </h2> */}
       <div
         className={`${
           links.length > 2 ? "lg:justify-between" : ""
