@@ -94,6 +94,7 @@ export default function AddFacebook() {
             type="text"
             name="fbVid"
             id="fbVid"
+            required
             onChange={handleFbLink}
             placeholder="Add video link..."
             className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"
@@ -108,6 +109,7 @@ export default function AddFacebook() {
             type="text"
             name="fbVid"
             id="fbVid"
+            required
             onChange={handleFbTitle}
             placeholder="Add video title..."
             className="h-[3rem] w-full px-[1rem] border-2 border-solid border-webColor rounded-lg"

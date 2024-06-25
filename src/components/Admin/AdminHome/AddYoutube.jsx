@@ -93,6 +93,7 @@ export default function AddYoutube() {
             type="text"
             name="ytvid"
             id="ytvid"
+            required
             value={ytLink}
             onChange={handleYtLink}
             placeholder="Add video link..."
@@ -107,6 +108,7 @@ export default function AddYoutube() {
             type="text"
             name="ytvid"
             id="ytvid"
+            required
             value={ytTitle}
             onChange={handleYtTitle}
             placeholder="Add video title..."
