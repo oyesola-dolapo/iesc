@@ -13,7 +13,7 @@ export default function History() {
           church history
         </h1>
       </div>
-      <div className=" lg:w-[60%] px-[1rem] lg:px-[2rem]">
+      <div className=" px-[1rem]  lg:px-[8rem]">
         <p className="lg:text-[1.2rem]">
           The Church of God known as{" "}
           <span className="text-webColor font-medium">

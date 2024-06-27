@@ -5,6 +5,8 @@ import { collection, getDocs } from "firebase/firestore";
 export default function Facebook({ active }) {
   const [links, setLinks] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [linksPerPage] = useState(6);
 
   const linkCollectionRef = collection(db, "facebook");
 
@@ -27,11 +29,23 @@ export default function Facebook({ active }) {
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
+    setCurrentPage(1);
   };
 
   const filteredLinks = links.filter((link) =>
     link.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const indexOfLastLink = currentPage * linksPerPage;
+  const indexOfFirstLink = indexOfLastLink - linksPerPage;
+  const currentLinks = filteredLinks.slice(indexOfFirstLink, indexOfLastLink);
+
+  const totalPages = Math.ceil(filteredLinks.length / linksPerPage);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <section
@@ -50,9 +64,9 @@ export default function Facebook({ active }) {
       </div>
       <div
         className={`${
-          filteredLinks.length > 2 ? "lg:justify-between" : ""
+          currentLinks.length > 2 ? "lg:justify-between" : ""
         } sm:flex sm:justify-start lg:gap-[1.5rem] lg:flex-wrap lg:w-[90%] lg:mx-auto`}>
-        {filteredLinks.map((link) => (
+        {currentLinks.map((link) => (
           <div
             className="sm:w-[49%] lg:w-[30%] mb-[1rem] lg:mb-0"
             key={link.id}>
@@ -66,9 +80,23 @@ export default function Facebook({ active }) {
             <p className="text-[.9rem] lg:text-[1rem]">{link.title}</p>
           </div>
         ))}
-        {filteredLinks.length === 0 && (
+        {currentLinks.length === 0 && (
           <p className="text-center w-full mt-4">No videos found.</p>
         )}
+      </div>
+      <div className="flex justify-center mt-4">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => paginate(index + 1)}
+            className={`mx-1 px-3 py-1 border rounded ${
+              currentPage === index + 1
+                ? "bg-webColor text-black"
+                : "bg-gray-200"
+            }`}>
+            {index + 1}
+          </button>
+        ))}
       </div>
     </section>
   );
