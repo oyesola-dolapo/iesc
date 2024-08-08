@@ -125,7 +125,7 @@ export default function Appointment() {
       </h1>
       <div className="px-[1rem]">
         <form action="" onSubmit={check && handleSubmit}>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center ">
             <label
               for="department"
               className="uppercase mr-[.5rem] text-[.8rem] font-medium">
@@ -148,7 +148,7 @@ export default function Appointment() {
               ))}
             </select>
           </div>
-          <div className="lg:flex lg:flex-wrap gap-[1rem] lg:w-[75%] lg:mx-auto mt-[1rem]">
+          <div className="xl:w-[58%] lg:flex lg:flex-wrap lg:justify-between lg:w-[75%] lg:mx-auto mt-[1rem]">
             {forms.map((form) => {
               return (
                 <div className="flex flex-col mb-[.6rem] lg:w-max">
@@ -168,7 +168,7 @@ export default function Appointment() {
               );
             })}
           </div>
-          <div className="flex justify-center mb-4 mt-2 items-start lg:items-center">
+          <div className="flex justify-center  mb-4 mt-2 items-start lg:items-center">
             <input
               type="checkbox"
               name="check"
