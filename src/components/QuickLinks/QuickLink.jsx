@@ -3,9 +3,9 @@ import React from "react";
 export default function QuickLink() {
   const links = [
     {
-      title: "Live Porgram",
+      title: "Live Program",
       subtitle:
-        "Join us live for an immersive church experience - click here to participate!",
+        "Experience church like never before join us live and be part of something powerful. Click here to participate now!",
       btn: {
         title: "Live",
         link: "/live",
@@ -14,7 +14,7 @@ export default function QuickLink() {
     {
       title: "join a department",
       subtitle:
-        "Join us live for an immersive church experience - click here to participate!",
+        "Join us now and become part of a vibrant church department. click here to serve, grow, and make a difference together.",
       btn: {
         title: "Join",
         link: "/register",
@@ -22,7 +22,7 @@ export default function QuickLink() {
     },
     {
       title: "locate the church",
-      subtitle: "Explore Our Parish Locations Near You!",
+      subtitle: "Discover our church branches close to you and connect with the nearest parish community around your area today!",
       btn: {
         title: "Location",
         link: "/parishes",
@@ -31,7 +31,7 @@ export default function QuickLink() {
     {
       title: "Online Giving",
       subtitle:
-        "Contribute to our ministry's mission by participating in online giving and offering ",
+        "Support our ministry’s mission by giving and offering online. Your contribution helps us reach more souls and fulfill God’s purpose.",
       btn: {
         title: "Give",
         link: "/Give",
@@ -39,17 +39,16 @@ export default function QuickLink() {
     },
     {
       title: "church history",
-      subtitle:
-        "Learn about our church by exploring our history now!",
+      subtitle: "Discover more about our church. explore our inspiring history and journey of faith today to understand who we truly are.",
       btn: {
         title: "Read",
         link: "/church history",
       },
     },
     {
-      title: "Live Porgram",
+      title: "Media Gallery",
       subtitle:
-        "Join us live for an immersive church experience - click here to participate!",
+        "Explore our captivating media gallery and relive powerful moments from our church events. click here to start watching now!",
       btn: {
         title: "click here",
         link: "/Live",
@@ -60,12 +59,12 @@ export default function QuickLink() {
     <div className="flex lg:w-[70%] lg:mx-auto flex-wrap justify-center gap-[1.5rem] lg:gap-[1rem] xl:gap-[3rem] px-[2rem] py-[1rem] xl:py-[2rem] xl:px-0">
       {links.map((link) => {
         return (
-          <div className="relative shadow sm:w-[17rem] h-[19rem] px-[2.5rem] lg:px-[1rem] flex flex-col items-center pt-[2rem] rounded bg-gray-100">
+          <div className="relative shadow sm:w-[17rem] min-h-[19rem] px-[2.5rem] lg:px-[1rem] flex flex-col items-center pt-[2rem] rounded bg-gray-100">
             <h1 className="font-bold text-[1.8rem] mb-[.6rem] uppercase text-center leading-9">
               {link.title}
             </h1>
-            <p className="text-center">{link.subtitle}</p>
-            <button className="absolute bottom-[1.5rem]">
+            <p className="text-center mb-[1.5rem]">{link.subtitle}</p>
+            <button className="mt-auto mb-[1.5rem]">
               <a
                 href={link.btn.link}
                 className="bg-webColor text-black font-bold uppercase px-[1.2rem] py-[.6rem] rounded">
