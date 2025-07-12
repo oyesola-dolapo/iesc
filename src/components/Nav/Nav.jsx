@@ -74,6 +74,7 @@ export default function Nav() {
     },
     {
       title: "GIVE",
+      link: "give",
     },
     {
       title: "MEDIA CONNECT",

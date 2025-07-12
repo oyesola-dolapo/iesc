@@ -9,6 +9,7 @@ import Sunday from "./components/Programs/Sunday/Sunday";
 import MeetPrimate from "./components/Nav/PrimateOffice/MeetPrimate.jsx";
 import Auth from "./components/Admin/AdminAuth/Auth.jsx";
 import Media from "./components/MediaResources/Media.jsx";
+import Give from "./components/Give/Give.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddLink from "./components/Admin/AdminHome/AddLink/AddLink.jsx";
@@ -45,6 +46,7 @@ function App() {
             <Route path="appointment" element={<Appointment />} />
             <Route path="media" element={<Media />} />
             <Route path="live" element={<Live />} />
+            <Route path="give" element={<Give />} />
             <Route path="iescadmin" element={<Auth />} />
             <Route path="/iescadmin/links" element={<AddLink />} />
             <Route path="/iescadmin/registration" element={<Registration />} />
