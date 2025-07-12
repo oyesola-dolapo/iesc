@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Location() {
   return (
-    <section className="py-[1rem]">
+    <section className="pt-[1rem] bg-white">
       <h1 className="uppercase text-2xl pb-[1rem] text-center text-webColor font-bold">
         locate us
       </h1>

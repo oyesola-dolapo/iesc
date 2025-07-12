@@ -5,13 +5,19 @@ import QuickLink from "./QuickLinks/QuickLink";
 
 export default function Home() {
   return (
-    <section id="Home" className="relative">
+    <section
+      id="Home"
+      className="min-h-screen bg-fixed bg-cover bg-center pb-4"
+      style={{
+        backgroundImage: "url('/images/member/flag.jpg')",
+      }}>
       <Landing />
-      {/* <div className="w-full">
-        <Location />
-      </div> */}
+
       <div className="mt-[1rem]">
         <QuickLink />
+      </div>
+      <div className="w-full">
+        <Location />
       </div>
     </section>
   );

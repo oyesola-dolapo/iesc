@@ -57,7 +57,7 @@ export default function QuickLink() {
     },
   ];
   return (
-    <div className="flex lg:w-[70%] lg:mx-auto flex-wrap justify-center gap-[1.5rem] lg:gap-[1rem] px-[1rem] lx:px-0">
+    <div className="flex lg:w-[70%] lg:mx-auto flex-wrap justify-center gap-[1.5rem] lg:gap-[1rem] xl:gap-[3rem] px-[1rem] xl:py-[2rem] xl:px-0">
       {links.map((link) => {
         return (
           <div className="relative shadow sm:w-[17rem] h-[19rem] px-[2.5rem] lg:px-[1rem] flex flex-col items-center pt-[2rem] rounded bg-gray-100">

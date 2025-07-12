@@ -21,7 +21,6 @@ export default function Footer() {
     },
   ];
 
-  
   return (
     <footer className=" bg-grayBg text-white p-4 py-6 sm:px-[2rem] flex flex-col gap-8 xl:gap-4 xl:flex-row w-full xl:justify-between xl:px-[6rem]">
       <div id="contact" className="flex flex-col gap-4">
@@ -89,8 +88,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      
     </footer>
   );
 }
