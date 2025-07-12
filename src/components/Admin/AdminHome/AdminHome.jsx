@@ -16,6 +16,15 @@ export default function AdminHome() {
       },
     },
     {
+      title: "Add Events",
+      subtitle:
+        "This section allows you to seamlessly add and manage Future events.",
+      btn: {
+        title: "Add Event",
+        link: "",
+      },
+    },
+    {
       title: "Registration",
       subtitle:
         "This section allows you to view the list of those who registered for a department.",
