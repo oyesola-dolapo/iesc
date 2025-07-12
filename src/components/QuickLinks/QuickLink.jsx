@@ -51,7 +51,7 @@ export default function QuickLink() {
         "Explore our captivating media gallery and relive powerful moments from our church events. click here to start watching now!",
       btn: {
         title: "click here",
-        link: "/Live",
+        link: "/media",
       },
     },
   ];

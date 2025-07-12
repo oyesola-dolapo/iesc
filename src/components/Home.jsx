@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section
       id="Home"
-      className="min-h-screen bg-fixed bg-cover bg-center pb-4"
+      className="min-h-screen bg-fixed bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/member/flag.jpg')",
       }}>
